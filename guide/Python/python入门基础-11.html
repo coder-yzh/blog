@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>列表推导式和生成器 | Coderyzh的博客</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/blog/logo.jpg">
+    <meta name="description" content="冲鸭！">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.9a55a594.css" as="style"><link rel="preload" href="/blog/assets/js/app.a8766d76.js" as="script"><link rel="preload" href="/blog/assets/js/2.7533f6e6.js" as="script"><link rel="preload" href="/blog/assets/js/40.7e03ec5e.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.885c6e23.js"><link rel="prefetch" href="/blog/assets/js/11.ffa3d654.js"><link rel="prefetch" href="/blog/assets/js/12.2ea34cef.js"><link rel="prefetch" href="/blog/assets/js/13.e20da210.js"><link rel="prefetch" href="/blog/assets/js/14.88d3e5c6.js"><link rel="prefetch" href="/blog/assets/js/15.fa0e7cb3.js"><link rel="prefetch" href="/blog/assets/js/16.10f56bfd.js"><link rel="prefetch" href="/blog/assets/js/17.e7f7036a.js"><link rel="prefetch" href="/blog/assets/js/18.0a46a51c.js"><link rel="prefetch" href="/blog/assets/js/19.3a71ffa9.js"><link rel="prefetch" href="/blog/assets/js/20.6dd9f744.js"><link rel="prefetch" href="/blog/assets/js/21.363db7c8.js"><link rel="prefetch" href="/blog/assets/js/22.85b912f6.js"><link rel="prefetch" href="/blog/assets/js/23.e1c78269.js"><link rel="prefetch" href="/blog/assets/js/24.87712464.js"><link rel="prefetch" href="/blog/assets/js/25.01d111c9.js"><link rel="prefetch" href="/blog/assets/js/26.5384d46a.js"><link rel="prefetch" href="/blog/assets/js/27.06a77ce7.js"><link rel="prefetch" href="/blog/assets/js/28.dee28251.js"><link rel="prefetch" href="/blog/assets/js/29.8735c1bd.js"><link rel="prefetch" href="/blog/assets/js/3.d2a5d2b1.js"><link rel="prefetch" href="/blog/assets/js/30.e01f8138.js"><link rel="prefetch" href="/blog/assets/js/31.f006e3c9.js"><link rel="prefetch" href="/blog/assets/js/32.ba3efeab.js"><link rel="prefetch" href="/blog/assets/js/33.9c85da1b.js"><link rel="prefetch" href="/blog/assets/js/34.991fc479.js"><link rel="prefetch" href="/blog/assets/js/35.77a02eab.js"><link rel="prefetch" href="/blog/assets/js/36.8c000e42.js"><link rel="prefetch" href="/blog/assets/js/37.c7e4dcad.js"><link rel="prefetch" href="/blog/assets/js/38.9c8583e2.js"><link rel="prefetch" href="/blog/assets/js/39.f78da62b.js"><link rel="prefetch" href="/blog/assets/js/4.bf5a800a.js"><link rel="prefetch" href="/blog/assets/js/41.0e2cafc7.js"><link rel="prefetch" href="/blog/assets/js/42.c82482dd.js"><link rel="prefetch" href="/blog/assets/js/43.f1609a1d.js"><link rel="prefetch" href="/blog/assets/js/44.1e8bad32.js"><link rel="prefetch" href="/blog/assets/js/45.c3f3857d.js"><link rel="prefetch" href="/blog/assets/js/46.d18b5371.js"><link rel="prefetch" href="/blog/assets/js/47.be4f4a89.js"><link rel="prefetch" href="/blog/assets/js/48.dfcceb94.js"><link rel="prefetch" href="/blog/assets/js/49.7d93d048.js"><link rel="prefetch" href="/blog/assets/js/5.7365f518.js"><link rel="prefetch" href="/blog/assets/js/50.1df2a5f5.js"><link rel="prefetch" href="/blog/assets/js/51.adcdc2be.js"><link rel="prefetch" href="/blog/assets/js/52.f6515f82.js"><link rel="prefetch" href="/blog/assets/js/53.095ddcba.js"><link rel="prefetch" href="/blog/assets/js/54.eaa84284.js"><link rel="prefetch" href="/blog/assets/js/55.b703f464.js"><link rel="prefetch" href="/blog/assets/js/56.c92ce5f3.js"><link rel="prefetch" href="/blog/assets/js/57.fd601ef9.js"><link rel="prefetch" href="/blog/assets/js/58.82d39220.js"><link rel="prefetch" href="/blog/assets/js/59.61dd1284.js"><link rel="prefetch" href="/blog/assets/js/6.f942c28c.js"><link rel="prefetch" href="/blog/assets/js/60.4af561a9.js"><link rel="prefetch" href="/blog/assets/js/61.7e8ed391.js"><link rel="prefetch" href="/blog/assets/js/62.1b129d44.js"><link rel="prefetch" href="/blog/assets/js/63.1e8d0aea.js"><link rel="prefetch" href="/blog/assets/js/64.19d67993.js"><link rel="prefetch" href="/blog/assets/js/65.745f941d.js"><link rel="prefetch" href="/blog/assets/js/66.9cb5dd0f.js"><link rel="prefetch" href="/blog/assets/js/67.ee361403.js"><link rel="prefetch" href="/blog/assets/js/68.24bd88ba.js"><link rel="prefetch" href="/blog/assets/js/69.6fdc256e.js"><link rel="prefetch" href="/blog/assets/js/7.85e210d5.js"><link rel="prefetch" href="/blog/assets/js/70.23607091.js"><link rel="prefetch" href="/blog/assets/js/71.fdfa3eb3.js"><link rel="prefetch" href="/blog/assets/js/72.4cc9b63f.js"><link rel="prefetch" href="/blog/assets/js/73.63bde3dc.js"><link rel="prefetch" href="/blog/assets/js/74.903eb92e.js"><link rel="prefetch" href="/blog/assets/js/75.94c5054f.js"><link rel="prefetch" href="/blog/assets/js/76.e626847b.js"><link rel="prefetch" href="/blog/assets/js/77.72e060da.js"><link rel="prefetch" href="/blog/assets/js/78.0baed4f6.js"><link rel="prefetch" href="/blog/assets/js/79.5954565b.js"><link rel="prefetch" href="/blog/assets/js/8.baf7966e.js"><link rel="prefetch" href="/blog/assets/js/80.c7a4a11c.js"><link rel="prefetch" href="/blog/assets/js/81.813b9331.js"><link rel="prefetch" href="/blog/assets/js/82.eb753c9b.js"><link rel="prefetch" href="/blog/assets/js/83.14a3f24e.js"><link rel="prefetch" href="/blog/assets/js/84.cbf28e40.js"><link rel="prefetch" href="/blog/assets/js/85.5fc0e4b4.js"><link rel="prefetch" href="/blog/assets/js/86.66768a8e.js"><link rel="prefetch" href="/blog/assets/js/87.ef19bf66.js"><link rel="prefetch" href="/blog/assets/js/88.b1aac405.js"><link rel="prefetch" href="/blog/assets/js/89.4aa0624d.js"><link rel="prefetch" href="/blog/assets/js/9.b07dbdb4.js"><link rel="prefetch" href="/blog/assets/js/90.9088e008.js"><link rel="prefetch" href="/blog/assets/js/91.9f86ae39.js"><link rel="prefetch" href="/blog/assets/js/92.526f6f0a.js"><link rel="prefetch" href="/blog/assets/js/93.4a0668ae.js"><link rel="prefetch" href="/blog/assets/js/94.6d97004d.js"><link rel="prefetch" href="/blog/assets/js/95.2988fcde.js"><link rel="prefetch" href="/blog/assets/js/96.83fccfac.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.9a55a594.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">Coderyzh的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/blog/learn/学习汇报记录/第一周学习汇报记录2021-9-19.html" class="nav-link">
+  研路之行
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具箱" class="dropdown-title"><span class="title">工具箱</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具箱" class="mobile-dropdown-title"><span class="title">工具箱</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          在线编辑
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://tinypng.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  图片压缩
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          在线服务
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.aliyun.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  阿里云
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://cloud.tencent.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  腾讯云
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          博客指南
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://juejin.im/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://blog.csdn.net/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CSDN
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/blog/learn/学习汇报记录/第一周学习汇报记录2021-9-19.html" class="nav-link">
+  研路之行
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具箱" class="dropdown-title"><span class="title">工具箱</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具箱" class="mobile-dropdown-title"><span class="title">工具箱</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          在线编辑
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://tinypng.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  图片压缩
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          在线服务
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.aliyun.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  阿里云
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://cloud.tencent.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  腾讯云
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          博客指南
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://juejin.im/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://blog.csdn.net/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CSDN
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据结构与算法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Machine learning</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Machine Learning with Graphs</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Python</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/guide/Python/python入门基础-0.html" class="sidebar-link">python入门基础</a></li><li><a href="/blog/guide/Python/python入门基础-1.html" class="sidebar-link">Python概述和基本语法</a></li><li><a href="/blog/guide/Python/python入门基础-2.html" class="sidebar-link">运算符的应用和分支结构</a></li><li><a href="/blog/guide/Python/python入门基础-3.html" class="sidebar-link">循环结构</a></li><li><a href="/blog/guide/Python/python入门基础-4.html" class="sidebar-link">字符串的应用</a></li><li><a href="/blog/guide/Python/python入门基础-5.html" class="sidebar-link">列表使用入门</a></li><li><a href="/blog/guide/Python/python入门基础-6.html" class="sidebar-link">元组和字典的应用</a></li><li><a href="/blog/guide/Python/python入门基础-7.html" class="sidebar-link">函数入门</a></li><li><a href="/blog/guide/Python/python入门基础-8.html" class="sidebar-link">装饰器和匿名函数</a></li><li><a href="/blog/guide/Python/python入门基础-9.html" class="sidebar-link">文件操作和OS模块</a></li><li><a href="/blog/guide/Python/python入门基础-10.html" class="sidebar-link">异常处理</a></li><li><a href="/blog/guide/Python/python入门基础-11.html" class="active sidebar-link">列表推导式和生成器</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/guide/Python/python入门基础-11.html#_11-1列表、字典、集合推导式" class="sidebar-link">11.1列表、字典、集合推导式</a></li><li class="sidebar-sub-header"><a href="/blog/guide/Python/python入门基础-11.html#_11-2生成器" class="sidebar-link">11.2生成器</a></li><li class="sidebar-sub-header"><a href="/blog/guide/Python/python入门基础-11.html#_11-3-生成器-yield" class="sidebar-link">11.3 生成器-yield</a></li><li class="sidebar-sub-header"><a href="/blog/guide/Python/python入门基础-11.html#_11-4生成器-send" class="sidebar-link">11.4生成器-send</a></li><li class="sidebar-sub-header"><a href="/blog/guide/Python/python入门基础-11.html#_11-5生成器-协程" class="sidebar-link">11.5生成器-协程</a></li></ul></li><li><a href="/blog/guide/Python/python入门基础-12.html" class="sidebar-link">面向对象入门</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>前端</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>面试问题集</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>其他</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="列表推导式和生成器"><a href="#列表推导式和生成器" class="header-anchor">#</a> 列表推导式和生成器</h1> <h2 id="_11-1列表、字典、集合推导式"><a href="#_11-1列表、字典、集合推导式" class="header-anchor">#</a> 11.1列表、字典、集合推导式</h2> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token triple-quoted-string string">'''
+列表推导式：最终得到的是一个列表
+
+格式： [i for i in 可迭代的变量]
+'''</span>
+<span class="token comment"># list1 = []</span>
+<span class="token comment"># for i in range(1, 21):</span>
+<span class="token comment">#     list1.append(i)</span>
+
+list1 <span class="token operator">=</span> <span class="token punctuation">[</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">21</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>list1<span class="token punctuation">)</span>  <span class="token comment"># [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]</span>
+
+list1 <span class="token operator">=</span> <span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">2</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>list1<span class="token punctuation">)</span>  <span class="token comment"># [3, 4, 5, 6, 7, 8, 9, 10, 11]</span>
+
+<span class="token comment"># 0-100 之间所有的偶数 存放到列表中</span>
+list1 <span class="token operator">=</span> <span class="token punctuation">[</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">101</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>list1<span class="token punctuation">)</span>
+
+list1 <span class="token operator">=</span> <span class="token punctuation">[</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">101</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>list1<span class="token punctuation">)</span>
+
+<span class="token comment"># 格式1</span>
+<span class="token comment"># list1 = []</span>
+<span class="token comment"># for i in range(0, 101):</span>
+<span class="token comment">#     if i % 2 == 0:</span>
+<span class="token comment">#         list1.append(i)</span>
+<span class="token comment"># print(list1)</span>
+
+<span class="token comment"># 格式2：[i for i in 可迭代的 if 条件]</span>
+<span class="token comment"># 执行顺序：</span>
+<span class="token comment"># for i in range(0, 101) ---&gt;    if i % 2 == 0   ---&gt;  i</span>
+list1 <span class="token operator">=</span> <span class="token punctuation">[</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">101</span><span class="token punctuation">)</span> <span class="token keyword">if</span> i <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>list1<span class="token punctuation">)</span>
+
+list2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'62'</span><span class="token punctuation">,</span> <span class="token string">'hello'</span><span class="token punctuation">,</span> <span class="token string">'100'</span><span class="token punctuation">,</span> <span class="token string">'world'</span><span class="token punctuation">,</span> <span class="token string">'luck'</span><span class="token punctuation">,</span> <span class="token string">'88'</span><span class="token punctuation">]</span>
+list3 <span class="token operator">=</span> <span class="token punctuation">[</span>word <span class="token keyword">for</span> word <span class="token keyword">in</span> list2 <span class="token keyword">if</span> word<span class="token punctuation">.</span>isalpha<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>list3<span class="token punctuation">)</span>
+
+<span class="token comment"># list2 如果是h开头的则将首字母大写，不是h开头的全部转成大写</span>
+<span class="token comment"># 格式3:[结果1 if 条件 else 结果2 for 变量 in 可迭代的]</span>
+<span class="token comment"># for word in list2---&gt;if word.startswith('h')</span>
+<span class="token comment"># 若条件成立---&gt;word.title()</span>
+<span class="token comment"># 若条件不成立---&gt;word.upper()</span>
+list4 <span class="token operator">=</span> <span class="token punctuation">[</span>word<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">if</span> word<span class="token punctuation">.</span>startswith<span class="token punctuation">(</span><span class="token string">'h'</span><span class="token punctuation">)</span> <span class="token keyword">else</span> word<span class="token punctuation">.</span>upper<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">for</span> word <span class="token keyword">in</span> list2<span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>list4<span class="token punctuation">)</span>
+
+<span class="token comment"># 格式4：双重循环 三重循环也是一样的</span>
+new_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        new_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> j<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>new_list<span class="token punctuation">)</span>
+
+new_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span> <span class="token keyword">for</span> x <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token keyword">for</span> y <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>new_list<span class="token punctuation">)</span>
+
+<span class="token comment"># 1、请写出一段python代码实现分组一个list里面的元素，比如[1,2,3,...,100]变成[[1,2,3],[4,5,6],...,]</span>
+<span class="token comment"># 2、找出里面名字含有两个'e'的放到新列表中：</span>
+<span class="token comment"># names=[['Tom','Billy','Jefferson','Andrew','Wesley','Steven','Joe'],</span>
+<span class="token comment">#       ['Alice','Jill','Ana','Wendy','Jennifer','Sherry','Eva']]</span>
+
+<span class="token comment"># 练习1</span>
+a <span class="token operator">=</span> <span class="token punctuation">[</span>x <span class="token keyword">for</span> x <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">101</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+b <span class="token operator">=</span> <span class="token punctuation">[</span>a<span class="token punctuation">[</span>x<span class="token punctuation">:</span>x <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">]</span> <span class="token keyword">for</span> x <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span>
+
+<span class="token comment"># 练习2</span>
+names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'Tom'</span><span class="token punctuation">,</span> <span class="token string">'Billy'</span><span class="token punctuation">,</span> <span class="token string">'Jefferson'</span><span class="token punctuation">,</span> <span class="token string">'Andrew'</span><span class="token punctuation">,</span> <span class="token string">'Wesley'</span><span class="token punctuation">,</span> <span class="token string">'Steven'</span><span class="token punctuation">,</span> <span class="token string">'Joe'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+         <span class="token punctuation">[</span><span class="token string">'Alice'</span><span class="token punctuation">,</span> <span class="token string">'Jill'</span><span class="token punctuation">,</span> <span class="token string">'Ana'</span><span class="token punctuation">,</span> <span class="token string">'Wendy'</span><span class="token punctuation">,</span> <span class="token string">'Jennifer'</span><span class="token punctuation">,</span> <span class="token string">'Sherry'</span><span class="token punctuation">,</span> <span class="token string">'Eva'</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+new_names <span class="token operator">=</span> <span class="token punctuation">[</span>y <span class="token keyword">for</span> x <span class="token keyword">in</span> names <span class="token keyword">for</span> y <span class="token keyword">in</span> x <span class="token keyword">if</span> y<span class="token punctuation">.</span>count<span class="token punctuation">(</span><span class="token string">'e'</span><span class="token punctuation">)</span> <span class="token operator">&gt;=</span> <span class="token number">2</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>new_names<span class="token punctuation">)</span>
+
+<span class="token comment"># --------------分割线-----------------</span>
+
+<span class="token comment"># 列表推导式  字典推导式  集合推导式</span>
+<span class="token comment"># 旧的列表 ----》新的列表</span>
+
+<span class="token comment"># 1. 列表推导式:  格式: [表达式 for 变量 in 旧列表] 或者 [表达式 for 变量 in 旧列表 if 条件]</span>
+
+<span class="token comment">#  过滤掉长度小于或者等于3的人名</span>
+names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'tom'</span><span class="token punctuation">,</span> <span class="token string">'lily'</span><span class="token punctuation">,</span> <span class="token string">'abc'</span><span class="token punctuation">,</span> <span class="token string">'jack'</span><span class="token punctuation">,</span> <span class="token string">'steven'</span><span class="token punctuation">,</span> <span class="token string">'bob'</span><span class="token punctuation">,</span> <span class="token string">'ha'</span><span class="token punctuation">]</span>
+result <span class="token operator">=</span> <span class="token punctuation">[</span>name <span class="token keyword">for</span> name <span class="token keyword">in</span> names <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">3</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+
+<span class="token comment">#  过滤掉长度小于或者等于3的人名，并将其第一个字母大写</span>
+result <span class="token operator">=</span> <span class="token punctuation">[</span>name<span class="token punctuation">.</span>capitalize<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">for</span> name <span class="token keyword">in</span> names <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">3</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+
+<span class="token comment"># 将1-100之间能被3整除，组成一个新的列表</span>
+newlist <span class="token operator">=</span> <span class="token punctuation">[</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">101</span><span class="token punctuation">)</span> <span class="token keyword">if</span> i <span class="token operator">%</span> <span class="token number">3</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token keyword">and</span> i <span class="token operator">%</span> <span class="token number">5</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>newlist<span class="token punctuation">)</span>
+
+<span class="token comment"># 0~5 偶数  0~10奇数</span>
+<span class="token comment"># [(偶数，奇数),(),(),()]  [(0,1),（0,3）,(0,5),(0,7),(0,9),(2,1),(2,3),...]</span>
+newlist <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span> <span class="token keyword">for</span> x <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span> <span class="token keyword">if</span> x <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token keyword">for</span> y <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token keyword">if</span> y <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>newlist<span class="token punctuation">)</span>
+
+<span class="token comment"># list1 =[[1,2,3],[4,5,6],[7,8,9],[1,3,5]]  ---&gt;[3,6,9,5]</span>
+list1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+newlist <span class="token operator">=</span> <span class="token punctuation">[</span>i<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> list1<span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>newlist<span class="token punctuation">)</span>
+
+dict1 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span> <span class="token string">'tom'</span><span class="token punctuation">,</span> <span class="token string">'salary'</span><span class="token punctuation">:</span> <span class="token number">5000</span><span class="token punctuation">}</span>
+dict2 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span> <span class="token string">'lucy'</span><span class="token punctuation">,</span> <span class="token string">'salary'</span><span class="token punctuation">:</span> <span class="token number">8000</span><span class="token punctuation">}</span>
+dict3 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span> <span class="token string">'jack'</span><span class="token punctuation">,</span> <span class="token string">'salary'</span><span class="token punctuation">:</span> <span class="token number">4500</span><span class="token punctuation">}</span>
+dict4 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span> <span class="token string">'lily'</span><span class="token punctuation">,</span> <span class="token string">'salary'</span><span class="token punctuation">:</span> <span class="token number">3000</span><span class="token punctuation">}</span>
+
+list1 <span class="token operator">=</span> <span class="token punctuation">[</span>dict1<span class="token punctuation">,</span> dict2<span class="token punctuation">,</span> dict3<span class="token punctuation">,</span> dict4<span class="token punctuation">]</span>  <span class="token comment"># [{},{},{},{}]</span>
+
+<span class="token comment"># if薪资大于5000加200，低于等于5000加500</span>
+newlist <span class="token operator">=</span> <span class="token punctuation">[</span>employee<span class="token punctuation">[</span><span class="token string">'salary'</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">200</span> <span class="token keyword">if</span> employee<span class="token punctuation">[</span><span class="token string">'salary'</span><span class="token punctuation">]</span> <span class="token operator">&gt;</span> <span class="token number">5000</span> <span class="token keyword">else</span> employee<span class="token punctuation">[</span><span class="token string">'salary'</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">500</span> <span class="token keyword">for</span> employee <span class="token keyword">in</span> list1<span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>newlist<span class="token punctuation">)</span>
+
+a <span class="token operator">=</span> <span class="token builtin">map</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> employee<span class="token punctuation">:</span> employee<span class="token punctuation">[</span><span class="token string">'salary'</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">200</span> <span class="token keyword">if</span> employee<span class="token punctuation">[</span><span class="token string">'salary'</span><span class="token punctuation">]</span> <span class="token operator">&gt;</span> <span class="token number">5000</span> <span class="token keyword">else</span> employee<span class="token punctuation">[</span><span class="token string">'salary'</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">500</span><span class="token punctuation">,</span> list1<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'----&gt;'</span><span class="token punctuation">,</span> <span class="token builtin">list</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+newlist <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span> person<span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">'salary'</span><span class="token punctuation">:</span> person<span class="token punctuation">[</span><span class="token string">'salary'</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">200</span><span class="token punctuation">}</span> <span class="token keyword">if</span> person<span class="token punctuation">[</span><span class="token string">'salary'</span><span class="token punctuation">]</span> <span class="token operator">&gt;</span> <span class="token number">5000</span>
+           <span class="token keyword">else</span> <span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span> person<span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">'salary'</span><span class="token punctuation">:</span> person<span class="token punctuation">[</span><span class="token string">'salary'</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">500</span><span class="token punctuation">}</span>
+           <span class="token keyword">for</span> person <span class="token keyword">in</span> list1<span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>newlist<span class="token punctuation">)</span>
+<span class="token triple-quoted-string string">'''
+def func(names):
+    newlist=[]
+    for name in names:
+        if len(name)&gt;3:
+            name = name.title()
+            newlist.append(name)
+    return newlist
+
+
+def func():
+    newlist=[]
+    
+    for i in range(5):  # 偶数
+        if i%2==0:
+            for j in range(10):
+                if j%2!=0:
+                    newlist.append((i,j))
+    
+    return newlist
+                    
+        
+'''</span>
+
+<span class="token comment"># def func():</span>
+<span class="token comment">#     newlist = []</span>
+<span class="token comment">#</span>
+<span class="token comment">#     for i in range(5):  # 偶数</span>
+<span class="token comment">#         if i % 2 == 0:</span>
+<span class="token comment">#             for j in range(10):</span>
+<span class="token comment">#                 if j % 2 != 0:</span>
+<span class="token comment">#                     newlist.append((i, j))</span>
+<span class="token comment">#</span>
+<span class="token comment">#     return newlist</span>
+<span class="token comment">#</span>
+<span class="token comment">#</span>
+<span class="token comment"># x = func()</span>
+<span class="token comment"># print(x)</span>
+
+
+<span class="token comment"># 集合推导式  {}类似列表推导式，在列表推导式的基础上添加了一个去除重复项</span>
+
+list1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">]</span>
+set1 <span class="token operator">=</span> <span class="token punctuation">{</span>x <span class="token operator">-</span> <span class="token number">1</span> <span class="token keyword">for</span> x <span class="token keyword">in</span> list1 <span class="token keyword">if</span> x <span class="token operator">&gt;</span> <span class="token number">5</span><span class="token punctuation">}</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>set1<span class="token punctuation">)</span>
+
+<span class="token comment"># 字典推导式</span>
+dict1 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'a'</span><span class="token punctuation">:</span> <span class="token string">'A'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">:</span> <span class="token string">'B'</span><span class="token punctuation">,</span> <span class="token string">'c'</span><span class="token punctuation">:</span> <span class="token string">'C'</span><span class="token punctuation">,</span> <span class="token string">'d'</span><span class="token punctuation">:</span> <span class="token string">'C'</span><span class="token punctuation">}</span>
+
+newdict <span class="token operator">=</span> <span class="token punctuation">{</span>value<span class="token punctuation">:</span> key <span class="token keyword">for</span> key<span class="token punctuation">,</span> value <span class="token keyword">in</span> dict1<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>newdict<span class="token punctuation">)</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br></div></div><h2 id="_11-2生成器"><a href="#_11-2生成器" class="header-anchor">#</a> 11.2生成器</h2> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token triple-quoted-string string">'''
+通过列表生成式(列表推导式)，我们可以直接创建一个列表。
+但是，受到内存限制，列表容量肯定是有限的。
+而且，创建一个包含100万个元素的列表，不仅占用很大的存储空间，
+如果我们仅仅需要访问前面几个元素，那后面绝大多数元素占用的空间都白白浪费了。
+所以，如果列表元素可以按照某种算法推算出来，那我们是否可以在循环的过程中不断推算出后续的元素呢？
+这样就不必创建完整的list，从而节省大量的空间。在Python中，这种一边循环一边计算的机制，称为生成器：generator。
+
+得到生成器方式：
+1.通过列表推导式得到生成器
+
+
+'''</span>
+
+<span class="token comment"># [x for x in range(10000000000)]</span>
+
+<span class="token comment"># [0,3,6,9,12,15,18,21,...27]</span>
+
+<span class="token comment"># newlist = [x*3 for x in range(20)]</span>
+<span class="token comment"># print(type(newlist))</span>
+
+<span class="token comment"># 得到生成器</span>
+g <span class="token operator">=</span> <span class="token punctuation">(</span>x <span class="token operator">*</span> <span class="token number">3</span> <span class="token keyword">for</span> x <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>g<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># generator</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>g<span class="token punctuation">)</span>
+
+<span class="token comment"># 方式1：通过调用__next__() 方式得到元素</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>g<span class="token punctuation">.</span>__next__<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 0</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>g<span class="token punctuation">.</span>__next__<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 3</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>g<span class="token punctuation">.</span>__next__<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 6</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>g<span class="token punctuation">.</span>__next__<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 9</span>
+
+<span class="token comment"># 方式2： next(生成器对象)  builtins 系统内置函数</span>
+<span class="token comment"># 每调用一次next则会产生一个元素</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">next</span><span class="token punctuation">(</span>g<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">next</span><span class="token punctuation">(</span>g<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">next</span><span class="token punctuation">(</span>g<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">next</span><span class="token punctuation">(</span>g<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">next</span><span class="token punctuation">(</span>g<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">next</span><span class="token punctuation">(</span>g<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">next</span><span class="token punctuation">(</span>g<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># StopIteration  生成器本来就可以产生10个，得到了10个。在调用next(g) 抛出异常</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br></div></div><h2 id="_11-3-生成器-yield"><a href="#_11-3-生成器-yield" class="header-anchor">#</a> 11.3 生成器-yield</h2> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># g = (x * 3 for x in range(10))</span>
+<span class="token comment"># # 通过try-except，来防止异常报错</span>
+<span class="token comment"># while True:</span>
+<span class="token comment">#     try:</span>
+<span class="token comment">#         e = next(g)</span>
+<span class="token comment">#         print(e)</span>
+<span class="token comment">#     except:</span>
+<span class="token comment">#         print('没有更多元素啦！')</span>
+<span class="token comment">#         break</span>
+
+<span class="token comment"># 定义生成器的方式二:借助函数完成</span>
+<span class="token comment"># 只要函数中出现了yield关键字，说明函数就不是函数啦，变成生成器啦</span>
+<span class="token comment"># 菲波那切数列</span>
+<span class="token triple-quoted-string string">'''
+步骤：
+1. 定义一个函数，函数中使用yield关键字
+2. 调用函数，接收调用的结果
+3. 得到的结果就是生成器
+4. 借助于next() ,__next__()得到元素
+
+'''</span>
+
+
+<span class="token comment"># def func():</span>
+<span class="token comment">#     n = 0</span>
+<span class="token comment">#     while True:</span>
+<span class="token comment">#         n += 1</span>
+<span class="token comment">#         # print(n)</span>
+<span class="token comment">#         yield n  # return n  + 暂停</span>
+<span class="token comment">#</span>
+<span class="token comment">#</span>
+<span class="token comment"># # func()</span>
+<span class="token comment"># g = func()</span>
+<span class="token comment"># print(g)</span>
+<span class="token comment">#</span>
+<span class="token comment"># print(next(g))</span>
+<span class="token comment"># print(next(g))</span>
+<span class="token comment"># print(next(g))</span>
+<span class="token comment"># print(next(g))</span>
+
+
+<span class="token comment"># 0,1,1,2,3,5,8</span>
+<span class="token keyword">def</span> <span class="token function">fib</span><span class="token punctuation">(</span>length<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    a<span class="token punctuation">,</span> b <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span>
+    n <span class="token operator">=</span> <span class="token number">0</span>
+
+    <span class="token keyword">while</span> n <span class="token operator">&lt;</span> length<span class="token punctuation">:</span>
+        <span class="token comment"># print(b)</span>
+        <span class="token keyword">yield</span> b  <span class="token comment"># return b + 暂停</span>
+        a<span class="token punctuation">,</span> b <span class="token operator">=</span> b<span class="token punctuation">,</span> a <span class="token operator">+</span> b
+        n <span class="token operator">+=</span> <span class="token number">1</span>
+
+    <span class="token keyword">return</span> <span class="token string">'没有更多元素！！！'</span>  <span class="token comment"># return就是在得到StopIteration后提示信息</span>
+
+
+g <span class="token operator">=</span> fib<span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span>
+<span class="token comment">#</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">next</span><span class="token punctuation">(</span>g<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">next</span><span class="token punctuation">(</span>g<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">next</span><span class="token punctuation">(</span>g<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">next</span><span class="token punctuation">(</span>g<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">next</span><span class="token punctuation">(</span>g<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">next</span><span class="token punctuation">(</span>g<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">next</span><span class="token punctuation">(</span>g<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">next</span><span class="token punctuation">(</span>g<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">next</span><span class="token punctuation">(</span>g<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">next</span><span class="token punctuation">(</span>g<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br></div></div><h2 id="_11-4生成器-send"><a href="#_11-4生成器-send" class="header-anchor">#</a> 11.4生成器-send</h2> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token triple-quoted-string string">'''
+ 生成器方法:
+   __next__():  获取下一个元素
+  send(value): 向每次生成器调用中传值 注意： 第一次调用send(None)
+  
+'''</span>
+
+
+<span class="token keyword">def</span> <span class="token function">gen</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    i <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">while</span> i <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">:</span>
+        temp <span class="token operator">=</span> <span class="token keyword">yield</span> i  <span class="token comment"># return 1 + 暂停</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'temp:'</span><span class="token punctuation">,</span> temp<span class="token punctuation">)</span>
+        <span class="token keyword">for</span> x <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>temp<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'---------&gt;'</span><span class="token punctuation">,</span> x<span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'****************'</span><span class="token punctuation">)</span>
+        i <span class="token operator">+=</span> <span class="token number">1</span>
+    <span class="token keyword">return</span> <span class="token string">'没有更多的数据'</span>
+
+
+g <span class="token operator">=</span> gen<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># print(next(g))</span>
+<span class="token comment"># print(next(g))</span>
+<span class="token comment"># print(next(g))</span>
+
+<span class="token comment"># g.__next__()</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>g<span class="token punctuation">.</span>send<span class="token punctuation">(</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># n1 = g.send('呵呵')</span>
+<span class="token comment"># print('n1:', n1)</span>
+<span class="token comment"># n2 = g.send('哈哈')</span>
+<span class="token comment"># print('n2:', n2)</span>
+
+n1 <span class="token operator">=</span> g<span class="token punctuation">.</span>send<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'n1:'</span><span class="token punctuation">,</span> n1<span class="token punctuation">)</span>
+n2 <span class="token operator">=</span> g<span class="token punctuation">.</span>send<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'n2:'</span><span class="token punctuation">,</span> n2<span class="token punctuation">)</span>
+n1 <span class="token operator">=</span> g<span class="token punctuation">.</span>send<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'n3:'</span><span class="token punctuation">,</span> n1<span class="token punctuation">)</span>
+n2 <span class="token operator">=</span> g<span class="token punctuation">.</span>send<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'n4:'</span><span class="token punctuation">,</span> n2<span class="token punctuation">)</span>
+n1 <span class="token operator">=</span> g<span class="token punctuation">.</span>send<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'n5:'</span><span class="token punctuation">,</span> n1<span class="token punctuation">)</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br></div></div><h2 id="_11-5生成器-协程"><a href="#_11-5生成器-协程" class="header-anchor">#</a> 11.5生成器-协程</h2> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># 进程 &gt; 线程 &gt; 协程</span>
+<span class="token comment"># 协程的底层就是用生成器完成的</span>
+<span class="token comment"># 迅雷：多线程下载</span>
+
+<span class="token keyword">def</span> <span class="token function">task1</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;正在搬第{}块砖！&quot;</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">yield</span> <span class="token boolean">None</span>
+
+
+<span class="token keyword">def</span> <span class="token function">task2</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;正在听第{}首歌！&quot;</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">yield</span> <span class="token boolean">None</span>
+
+
+g1 <span class="token operator">=</span> task1<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
+g2 <span class="token operator">=</span> task2<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
+
+<span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+    <span class="token keyword">try</span><span class="token punctuation">:</span>
+        g1<span class="token punctuation">.</span>__next__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        g2<span class="token punctuation">.</span>__next__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">except</span><span class="token punctuation">:</span>
+        <span class="token keyword">break</span>
+
+<span class="token triple-quoted-string string">'''
+ 生成器:generator
+ 
+ 定义生成器方式:
+ 
+ 1. 通过列表推导式方式
+    g = (x+1 for x in range(6)) 
+    
+ 2. 函数+yield
+    def func（）:
+        ...
+        yield 
+    
+    g= func()   
+
+ 产生元素：
+   1.next(generator)  ---&gt; 每次调用都会产生一个新的元素，如果元素产生完毕，再次调用的话就会产生异常
+   2.生成器自己的方法：
+       g.__next__()  
+       g.send(value)  
+ 
+  应用: 协程
+'''</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新于:</span> <span class="time">9/26/2021, 10:50:58 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/guide/Python/python入门基础-10.html" class="prev">
+        异常处理
+      </a></span> <span class="next"><a href="/blog/guide/Python/python入门基础-12.html">
+        面向对象入门
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.a8766d76.js" defer></script><script src="/blog/assets/js/2.7533f6e6.js" defer></script><script src="/blog/assets/js/40.7e03ec5e.js" defer></script>
+  </body>
+</html>

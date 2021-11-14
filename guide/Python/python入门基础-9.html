@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>文件操作和OS模块 | Coderyzh的博客</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/blog/logo.jpg">
+    <meta name="description" content="冲鸭！">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.9a55a594.css" as="style"><link rel="preload" href="/blog/assets/js/app.a8766d76.js" as="script"><link rel="preload" href="/blog/assets/js/2.7533f6e6.js" as="script"><link rel="preload" href="/blog/assets/js/49.7d93d048.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.885c6e23.js"><link rel="prefetch" href="/blog/assets/js/11.ffa3d654.js"><link rel="prefetch" href="/blog/assets/js/12.2ea34cef.js"><link rel="prefetch" href="/blog/assets/js/13.e20da210.js"><link rel="prefetch" href="/blog/assets/js/14.88d3e5c6.js"><link rel="prefetch" href="/blog/assets/js/15.fa0e7cb3.js"><link rel="prefetch" href="/blog/assets/js/16.10f56bfd.js"><link rel="prefetch" href="/blog/assets/js/17.e7f7036a.js"><link rel="prefetch" href="/blog/assets/js/18.0a46a51c.js"><link rel="prefetch" href="/blog/assets/js/19.3a71ffa9.js"><link rel="prefetch" href="/blog/assets/js/20.6dd9f744.js"><link rel="prefetch" href="/blog/assets/js/21.363db7c8.js"><link rel="prefetch" href="/blog/assets/js/22.85b912f6.js"><link rel="prefetch" href="/blog/assets/js/23.e1c78269.js"><link rel="prefetch" href="/blog/assets/js/24.87712464.js"><link rel="prefetch" href="/blog/assets/js/25.01d111c9.js"><link rel="prefetch" href="/blog/assets/js/26.5384d46a.js"><link rel="prefetch" href="/blog/assets/js/27.06a77ce7.js"><link rel="prefetch" href="/blog/assets/js/28.dee28251.js"><link rel="prefetch" href="/blog/assets/js/29.8735c1bd.js"><link rel="prefetch" href="/blog/assets/js/3.d2a5d2b1.js"><link rel="prefetch" href="/blog/assets/js/30.e01f8138.js"><link rel="prefetch" href="/blog/assets/js/31.f006e3c9.js"><link rel="prefetch" href="/blog/assets/js/32.ba3efeab.js"><link rel="prefetch" href="/blog/assets/js/33.9c85da1b.js"><link rel="prefetch" href="/blog/assets/js/34.991fc479.js"><link rel="prefetch" href="/blog/assets/js/35.77a02eab.js"><link rel="prefetch" href="/blog/assets/js/36.8c000e42.js"><link rel="prefetch" href="/blog/assets/js/37.c7e4dcad.js"><link rel="prefetch" href="/blog/assets/js/38.9c8583e2.js"><link rel="prefetch" href="/blog/assets/js/39.f78da62b.js"><link rel="prefetch" href="/blog/assets/js/4.bf5a800a.js"><link rel="prefetch" href="/blog/assets/js/40.7e03ec5e.js"><link rel="prefetch" href="/blog/assets/js/41.0e2cafc7.js"><link rel="prefetch" href="/blog/assets/js/42.c82482dd.js"><link rel="prefetch" href="/blog/assets/js/43.f1609a1d.js"><link rel="prefetch" href="/blog/assets/js/44.1e8bad32.js"><link rel="prefetch" href="/blog/assets/js/45.c3f3857d.js"><link rel="prefetch" href="/blog/assets/js/46.d18b5371.js"><link rel="prefetch" href="/blog/assets/js/47.be4f4a89.js"><link rel="prefetch" href="/blog/assets/js/48.dfcceb94.js"><link rel="prefetch" href="/blog/assets/js/5.7365f518.js"><link rel="prefetch" href="/blog/assets/js/50.1df2a5f5.js"><link rel="prefetch" href="/blog/assets/js/51.adcdc2be.js"><link rel="prefetch" href="/blog/assets/js/52.f6515f82.js"><link rel="prefetch" href="/blog/assets/js/53.095ddcba.js"><link rel="prefetch" href="/blog/assets/js/54.eaa84284.js"><link rel="prefetch" href="/blog/assets/js/55.b703f464.js"><link rel="prefetch" href="/blog/assets/js/56.c92ce5f3.js"><link rel="prefetch" href="/blog/assets/js/57.fd601ef9.js"><link rel="prefetch" href="/blog/assets/js/58.82d39220.js"><link rel="prefetch" href="/blog/assets/js/59.61dd1284.js"><link rel="prefetch" href="/blog/assets/js/6.f942c28c.js"><link rel="prefetch" href="/blog/assets/js/60.4af561a9.js"><link rel="prefetch" href="/blog/assets/js/61.7e8ed391.js"><link rel="prefetch" href="/blog/assets/js/62.1b129d44.js"><link rel="prefetch" href="/blog/assets/js/63.1e8d0aea.js"><link rel="prefetch" href="/blog/assets/js/64.19d67993.js"><link rel="prefetch" href="/blog/assets/js/65.745f941d.js"><link rel="prefetch" href="/blog/assets/js/66.9cb5dd0f.js"><link rel="prefetch" href="/blog/assets/js/67.ee361403.js"><link rel="prefetch" href="/blog/assets/js/68.24bd88ba.js"><link rel="prefetch" href="/blog/assets/js/69.6fdc256e.js"><link rel="prefetch" href="/blog/assets/js/7.85e210d5.js"><link rel="prefetch" href="/blog/assets/js/70.23607091.js"><link rel="prefetch" href="/blog/assets/js/71.fdfa3eb3.js"><link rel="prefetch" href="/blog/assets/js/72.4cc9b63f.js"><link rel="prefetch" href="/blog/assets/js/73.63bde3dc.js"><link rel="prefetch" href="/blog/assets/js/74.903eb92e.js"><link rel="prefetch" href="/blog/assets/js/75.94c5054f.js"><link rel="prefetch" href="/blog/assets/js/76.e626847b.js"><link rel="prefetch" href="/blog/assets/js/77.72e060da.js"><link rel="prefetch" href="/blog/assets/js/78.0baed4f6.js"><link rel="prefetch" href="/blog/assets/js/79.5954565b.js"><link rel="prefetch" href="/blog/assets/js/8.baf7966e.js"><link rel="prefetch" href="/blog/assets/js/80.c7a4a11c.js"><link rel="prefetch" href="/blog/assets/js/81.813b9331.js"><link rel="prefetch" href="/blog/assets/js/82.eb753c9b.js"><link rel="prefetch" href="/blog/assets/js/83.14a3f24e.js"><link rel="prefetch" href="/blog/assets/js/84.cbf28e40.js"><link rel="prefetch" href="/blog/assets/js/85.5fc0e4b4.js"><link rel="prefetch" href="/blog/assets/js/86.66768a8e.js"><link rel="prefetch" href="/blog/assets/js/87.ef19bf66.js"><link rel="prefetch" href="/blog/assets/js/88.b1aac405.js"><link rel="prefetch" href="/blog/assets/js/89.4aa0624d.js"><link rel="prefetch" href="/blog/assets/js/9.b07dbdb4.js"><link rel="prefetch" href="/blog/assets/js/90.9088e008.js"><link rel="prefetch" href="/blog/assets/js/91.9f86ae39.js"><link rel="prefetch" href="/blog/assets/js/92.526f6f0a.js"><link rel="prefetch" href="/blog/assets/js/93.4a0668ae.js"><link rel="prefetch" href="/blog/assets/js/94.6d97004d.js"><link rel="prefetch" href="/blog/assets/js/95.2988fcde.js"><link rel="prefetch" href="/blog/assets/js/96.83fccfac.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.9a55a594.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">Coderyzh的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/blog/learn/学习汇报记录/第一周学习汇报记录2021-9-19.html" class="nav-link">
+  研路之行
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具箱" class="dropdown-title"><span class="title">工具箱</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具箱" class="mobile-dropdown-title"><span class="title">工具箱</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          在线编辑
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://tinypng.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  图片压缩
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          在线服务
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.aliyun.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  阿里云
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://cloud.tencent.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  腾讯云
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          博客指南
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://juejin.im/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://blog.csdn.net/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CSDN
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/blog/learn/学习汇报记录/第一周学习汇报记录2021-9-19.html" class="nav-link">
+  研路之行
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具箱" class="dropdown-title"><span class="title">工具箱</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具箱" class="mobile-dropdown-title"><span class="title">工具箱</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          在线编辑
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://tinypng.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  图片压缩
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          在线服务
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.aliyun.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  阿里云
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://cloud.tencent.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  腾讯云
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          博客指南
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://juejin.im/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://blog.csdn.net/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CSDN
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据结构与算法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Machine learning</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Machine Learning with Graphs</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Python</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/guide/Python/python入门基础-0.html" class="sidebar-link">python入门基础</a></li><li><a href="/blog/guide/Python/python入门基础-1.html" class="sidebar-link">Python概述和基本语法</a></li><li><a href="/blog/guide/Python/python入门基础-2.html" class="sidebar-link">运算符的应用和分支结构</a></li><li><a href="/blog/guide/Python/python入门基础-3.html" class="sidebar-link">循环结构</a></li><li><a href="/blog/guide/Python/python入门基础-4.html" class="sidebar-link">字符串的应用</a></li><li><a href="/blog/guide/Python/python入门基础-5.html" class="sidebar-link">列表使用入门</a></li><li><a href="/blog/guide/Python/python入门基础-6.html" class="sidebar-link">元组和字典的应用</a></li><li><a href="/blog/guide/Python/python入门基础-7.html" class="sidebar-link">函数入门</a></li><li><a href="/blog/guide/Python/python入门基础-8.html" class="sidebar-link">装饰器和匿名函数</a></li><li><a href="/blog/guide/Python/python入门基础-9.html" class="active sidebar-link">文件操作和OS模块</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/guide/Python/python入门基础-9.html#_9-1今日学习总结" class="sidebar-link">9.1今日学习总结</a></li><li class="sidebar-sub-header"><a href="/blog/guide/Python/python入门基础-9.html#_9-2文件操作-读" class="sidebar-link">9.2文件操作-读</a></li><li class="sidebar-sub-header"><a href="/blog/guide/Python/python入门基础-9.html#_9-3-文件操作-写" class="sidebar-link">9.3 文件操作-写</a></li><li class="sidebar-sub-header"><a href="/blog/guide/Python/python入门基础-9.html#_9-4文件操作-复制" class="sidebar-link">9.4文件操作-复制</a></li><li class="sidebar-sub-header"><a href="/blog/guide/Python/python入门基础-9.html#_9-5模块-os-py" class="sidebar-link">9.5模块: OS.py</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/guide/Python/python入门基础-9.html#_9-5-1-os-path-常用函数" class="sidebar-link">9.5.1 OS.path 常用函数</a></li><li class="sidebar-sub-header"><a href="/blog/guide/Python/python入门基础-9.html#_9-5-2-os常用函数" class="sidebar-link">9.5.2 OS常用函数</a></li></ul></li></ul></li><li><a href="/blog/guide/Python/python入门基础-10.html" class="sidebar-link">异常处理</a></li><li><a href="/blog/guide/Python/python入门基础-11.html" class="sidebar-link">列表推导式和生成器</a></li><li><a href="/blog/guide/Python/python入门基础-12.html" class="sidebar-link">面向对象入门</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>前端</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>面试问题集</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>其他</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="文件操作和os模块"><a href="#文件操作和os模块" class="header-anchor">#</a> 文件操作和OS模块</h1> <h2 id="_9-1今日学习总结"><a href="#_9-1今日学习总结" class="header-anchor">#</a> 9.1今日学习总结</h2> <div class="language-python line-numbers-mode"><pre class="language-python"><code>文件操作：
+
+<span class="token builtin">open</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span>mode<span class="token punctuation">)</span>
+
+mode <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">&gt;</span> r
+s<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+s<span class="token punctuation">.</span>readline<span class="token punctuation">(</span><span class="token punctuation">)</span>
+s<span class="token punctuation">.</span>readlines<span class="token punctuation">(</span><span class="token punctuation">)</span>
+s<span class="token punctuation">.</span>readable<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'a1.txt'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> fstream<span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
+
+FileNotFoundError<span class="token punctuation">:</span> <span class="token punctuation">[</span>Errno <span class="token number">2</span><span class="token punctuation">]</span> No such <span class="token builtin">file</span> <span class="token keyword">or</span> directory<span class="token punctuation">:</span> <span class="token string">'a1.txt'</span>
+
+mode <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">&gt;</span>w<span class="token punctuation">,</span>a
+
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'a1.txt'</span><span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> wstream<span class="token punctuation">:</span>   <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">&gt;</span> 如果指定的文件不存在，则自动创建。
+    wstream<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">'hello'</span><span class="token punctuation">)</span>
+
+write<span class="token punctuation">(</span><span class="token punctuation">)</span>
+writelines<span class="token punctuation">(</span><span class="token punctuation">)</span>
+writeable<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+os模块：
+os<span class="token punctuation">.</span>path
+
+absolute 绝对的  c<span class="token punctuation">:</span>\p1\girl<span class="token punctuation">.</span>jpg
+
+C<span class="token punctuation">:</span>\Users\running\Desktop\python基础\day13<span class="token punctuation">(</span><span class="token number">6</span><span class="token operator">-</span><span class="token number">14</span><span class="token punctuation">)</span>\代码\day13_文件\images\girl<span class="token punctuation">.</span>jpg
+
+
+文件：
+文件操作：
+  <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  path<span class="token punctuation">,</span>filename<span class="token punctuation">:</span>
+    path<span class="token punctuation">:</span>
+      绝对路径：C<span class="token punctuation">:</span>\Users\running\Desktop\python基础\day13<span class="token punctuation">(</span><span class="token number">6</span><span class="token operator">-</span><span class="token number">14</span><span class="token punctuation">)</span>\代码\day13_文件\images\girl<span class="token punctuation">.</span>jpg
+      相对路径：相对当前文件的路径。返回上层目录： <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token operator">/</span>
+  mode<span class="token punctuation">:</span>
+  读<span class="token punctuation">:</span>  rb  r
+  写<span class="token punctuation">:</span>  wb  w
+
+  stream  <span class="token operator">=</span>  <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">,</span>mode<span class="token punctuation">)</span>
+  stream<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+  stream<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token punctuation">)</span>
+  stream<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">,</span>mode<span class="token punctuation">)</span> <span class="token keyword">as</span> stream<span class="token punctuation">:</span>
+        操作代码
+
+
+  os模块：
+
+  os<span class="token punctuation">.</span>path<span class="token punctuation">:</span>常用函数
+    os<span class="token punctuation">.</span>path<span class="token punctuation">:</span> 常用函数
+     dirname<span class="token punctuation">(</span><span class="token punctuation">)</span> 获取指定文件的目录
+     join<span class="token punctuation">(</span><span class="token punctuation">)</span>    拼接获取新的路径
+     split<span class="token punctuation">(</span><span class="token punctuation">)</span>   分割<span class="token punctuation">(</span>文件目录，文件名<span class="token punctuation">)</span>
+     splittext<span class="token punctuation">(</span><span class="token punctuation">)</span>  分割<span class="token punctuation">(</span>文件目录\文件名<span class="token punctuation">,</span>文件的扩展名<span class="token punctuation">)</span>
+     getsize<span class="token punctuation">(</span><span class="token punctuation">)</span>   获取文件大小
+
+     isabs<span class="token punctuation">(</span><span class="token punctuation">)</span>   判断是否是绝对路径
+     isfile<span class="token punctuation">(</span><span class="token punctuation">)</span>  判断是否是文件
+     isdir<span class="token punctuation">(</span><span class="token punctuation">)</span>   判断是否是文件夹
+
+
+  os常用函数
+    os模块下方法<span class="token punctuation">:</span>
+    os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span>  获取当前目录
+    os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span><span class="token punctuation">)</span>  浏览文件夹
+    os<span class="token punctuation">.</span>mkdir<span class="token punctuation">(</span><span class="token punctuation">)</span>  创建文件夹
+    os<span class="token punctuation">.</span>rmdir<span class="token punctuation">(</span><span class="token punctuation">)</span>  删除空的文件夹
+    os<span class="token punctuation">.</span>remove<span class="token punctuation">(</span><span class="token punctuation">)</span>  删除文件
+    os<span class="token punctuation">.</span>chdir<span class="token punctuation">(</span><span class="token punctuation">)</span>  切换目录
+
+
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br></div></div><h2 id="_9-2文件操作-读"><a href="#_9-2文件操作-读" class="header-anchor">#</a> 9.2文件操作-读</h2> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># 文件操作:</span>
+<span class="token triple-quoted-string string">'''
+ 文件上传
+ 保存log
+
+系统函数：
+ open(file,mode,buffering,encodeing)
+
+ 读:
+   open（path/filename,'rt'）----&gt;返回值是一个流：stream (管道)
+
+   container = stream.read()  ----&gt;读取管道中内容
+
+   注意： 如果传递的path/filename有误，则会报错：FileNotFoundError
+    如果是图片则不能使用默认的读取方式,mode = 'rb'
+
+    总结:
+    read()  读取所有内容
+    readline() 每次读取一行内容
+    readlines() 读取所有的行保存到列表中
+    readable()  判断是否可读的
+
+'''</span>
+
+<span class="token comment"># stream = open(r'D:\work\aa.txt')</span>
+<span class="token comment"># container = stream.read()</span>
+<span class="token comment"># print(container)  # container是文件aa.txt中的内容</span>
+<span class="token comment">#</span>
+<span class="token comment"># result = stream.readable()  # 判断是否可以读取  True  False</span>
+<span class="token comment"># print(result)</span>
+<span class="token comment"># ------------分割线------------------</span>
+<span class="token comment"># # 每次循环读一行，每次读完一行会多一行换行符</span>
+<span class="token comment"># while True:</span>
+<span class="token comment">#     line = stream.readline()</span>
+<span class="token comment">#     print(line)</span>
+<span class="token comment">#     if not line:</span>
+<span class="token comment">#         break</span>
+
+<span class="token comment"># ------------分割线------------------</span>
+<span class="token comment"># lines = stream.readlines()  # 保存到列表中</span>
+<span class="token comment"># print(lines)  # ['hello world\n', 'hello kitty\n']</span>
+<span class="token comment"># for i in lines:</span>
+<span class="token comment">#     print(i)</span>
+<span class="token comment"># ------------分割线------------------</span>
+stream <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">r'D:\work\logo.jpg'</span><span class="token punctuation">,</span> <span class="token string">'rb'</span><span class="token punctuation">)</span>  <span class="token comment"># 图片用二进制读,'rb'</span>
+
+container <span class="token operator">=</span> stream<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>container<span class="token punctuation">)</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br></div></div><h2 id="_9-3-文件操作-写"><a href="#_9-3-文件操作-写" class="header-anchor">#</a> 9.3 文件操作-写</h2> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># 写文件</span>
+<span class="token triple-quoted-string string">'''
+stream = open(r'c:\p1\aa.txt', 'w')
+mode 是’w‘ 表示就是写操作  每次都会将原来的内容清空，
+
+方法:
+     write(内容)   然后写当前的内容
+    writelines(Iterable)  没有换行效果
+    stream.writelines(['赌神高进\n', '赌侠小刀\n', '赌圣周星星\n'])  ---》自己加换行效果
+
+如果mode='a'，表示追加，不会清空原来的内容，直接在现有的基础上直接添加新加的内容
+
+
+'''</span>
+
+<span class="token comment"># stream = open(r'D:\work\aa.txt', 'w')</span>
+
+stream <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">r'D:\work\aa.txt'</span><span class="token punctuation">,</span> <span class="token string">'a'</span><span class="token punctuation">)</span>
+s <span class="token operator">=</span> <span class="token triple-quoted-string string">'''
+你好！
+    欢迎来到澳门博彩赌场，赠送给你一个金币！
+                赌王: 高进
+
+'''</span>
+<span class="token comment"># result = stream.write(s)</span>
+result <span class="token operator">=</span> stream<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">'hello'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+
+stream<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">'龙五'</span><span class="token punctuation">)</span>
+
+stream<span class="token punctuation">.</span>writelines<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'赌神高进\n'</span><span class="token punctuation">,</span> <span class="token string">'赌侠小刀\n'</span><span class="token punctuation">,</span> <span class="token string">'赌圣周星星\n'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+stream<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">'僵尸先生'</span><span class="token punctuation">)</span>
+
+stream<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 释放资源</span>
+
+<span class="token comment"># stream.write('龙五2号')  # 资源释放后，再写的话，会报错：ValueError: I/O operation on closed file.</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br></div></div><h2 id="_9-4文件操作-复制"><a href="#_9-4文件操作-复制" class="header-anchor">#</a> 9.4文件操作-复制</h2> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># 文件的复制</span>
+<span class="token triple-quoted-string string">'''
+原文件： D:\work\logo.jpg
+目标文件： D:\work1\logo.jpg
+
+with 结合open使用，可以帮助我们自动释放资源
+
+'''</span>
+<span class="token comment"># stream = open(r'D:\work\logo.jpg', 'rb')</span>
+
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">r'D:\work\logo.jpg'</span><span class="token punctuation">,</span> <span class="token string">'rb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> stream<span class="token punctuation">:</span>
+    container <span class="token operator">=</span> stream<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 读取文件内容</span>
+
+    <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">r'D:\work1\logo.jpg'</span><span class="token punctuation">,</span> <span class="token string">'wb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> wstream<span class="token punctuation">:</span>
+        wstream<span class="token punctuation">.</span>write<span class="token punctuation">(</span>container<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'文件复制完成！'</span><span class="token punctuation">)</span>
+
+
+<span class="token comment">#---------------分割线------------------</span>
+<span class="token keyword">import</span> os
+
+<span class="token comment"># 文件复制</span>
+src_path <span class="token operator">=</span> <span class="token string">r'D:\work'</span>
+target_path <span class="token operator">=</span> <span class="token string">r'D:\work1'</span>
+
+
+<span class="token comment"># 封装成函数</span>
+<span class="token keyword">def</span> <span class="token function">copy</span><span class="token punctuation">(</span>src<span class="token punctuation">,</span> target<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>isdir<span class="token punctuation">(</span>src<span class="token punctuation">)</span> <span class="token keyword">and</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>isdir<span class="token punctuation">(</span>target<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        filelist <span class="token operator">=</span> os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span>src<span class="token punctuation">)</span>  <span class="token comment"># ['aa.txt','','']</span>
+
+        <span class="token keyword">for</span> <span class="token builtin">file</span> <span class="token keyword">in</span> filelist<span class="token punctuation">:</span>  <span class="token comment"># aa.txt</span>
+
+            path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>src<span class="token punctuation">,</span> <span class="token builtin">file</span><span class="token punctuation">)</span>
+            <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span> <span class="token string">'rb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> rstream<span class="token punctuation">:</span>
+                container <span class="token operator">=</span> rstream<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+                path1 <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>target<span class="token punctuation">,</span><span class="token builtin">file</span><span class="token punctuation">)</span>
+                <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>path1<span class="token punctuation">,</span><span class="token string">'wb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> wstream<span class="token punctuation">:</span>
+                    wstream<span class="token punctuation">.</span>write<span class="token punctuation">(</span>container<span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'复制完毕！'</span><span class="token punctuation">)</span>
+
+
+<span class="token comment"># 调用函数</span>
+copy<span class="token punctuation">(</span>src_path<span class="token punctuation">,</span>target_path<span class="token punctuation">)</span>
+
+<span class="token comment">#---------------分割线------------------</span>
+<span class="token comment">#对文件中的文件，文件夹一块复制</span>
+<span class="token keyword">import</span> os
+
+src_path <span class="token operator">=</span> <span class="token string">r'D:\work'</span>
+target_path <span class="token operator">=</span> <span class="token string">r'D:\work3'</span>
+
+
+<span class="token keyword">def</span> <span class="token function">copy</span><span class="token punctuation">(</span>src_path<span class="token punctuation">,</span> target_path<span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 'D:\work'</span>
+    <span class="token comment"># 获取文件夹里面内容</span>
+    filelist <span class="token operator">=</span> os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span>src_path<span class="token punctuation">)</span>  <span class="token comment"># ['a1.doc', 'aa.txt', 'logo.jpg', 'WeChat']</span>
+    <span class="token comment"># print(filelist)</span>
+    <span class="token comment"># 变量列表</span>
+    <span class="token keyword">for</span> <span class="token builtin">file</span> <span class="token keyword">in</span> filelist<span class="token punctuation">:</span>
+        <span class="token comment"># 拼接路径</span>
+        path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>src_path<span class="token punctuation">,</span> <span class="token builtin">file</span><span class="token punctuation">)</span>  <span class="token comment"># D:\work\..</span>
+        <span class="token comment"># 判断是文件夹还是文件</span>
+        <span class="token keyword">if</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>isdir<span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># path = ‘D:\work\..’</span>
+            <span class="token comment"># 递归调用copy</span>
+            target_path1 <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>target_path<span class="token punctuation">,</span> <span class="token builtin">file</span><span class="token punctuation">)</span>
+            <span class="token comment"># 创建文件夹</span>
+            os<span class="token punctuation">.</span>mkdir<span class="token punctuation">(</span>target_path1<span class="token punctuation">)</span>
+            copy<span class="token punctuation">(</span>path<span class="token punctuation">,</span> target_path1<span class="token punctuation">)</span>
+
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token comment"># 不是文件夹则直接进行复制</span>
+            <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span> <span class="token string">'rb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> rstream<span class="token punctuation">:</span>
+                container <span class="token operator">=</span> rstream<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+                path1 <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>target_path<span class="token punctuation">,</span> <span class="token builtin">file</span><span class="token punctuation">)</span>
+                <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>path1<span class="token punctuation">,</span> <span class="token string">'wb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> wstream<span class="token punctuation">:</span>
+                    wstream<span class="token punctuation">.</span>write<span class="token punctuation">(</span>container<span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'复制完成！'</span><span class="token punctuation">)</span>
+
+
+<span class="token comment"># 调用copy</span>
+copy<span class="token punctuation">(</span>src_path<span class="token punctuation">,</span> target_path<span class="token punctuation">)</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br></div></div><h2 id="_9-5模块-os-py"><a href="#_9-5模块-os-py" class="header-anchor">#</a> 9.5模块: OS.py</h2> <h3 id="_9-5-1-os-path-常用函数"><a href="#_9-5-1-os-path-常用函数" class="header-anchor">#</a> 9.5.1 OS.path 常用函数</h3> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># 模块： os.py</span>
+<span class="token keyword">import</span> random
+
+<span class="token triple-quoted-string string">'''
+os.path:
+os.path.dirname(__file__)获取当前文件所在的文件目录（绝对路径）
+os.path.join(path,'')  返回的是一个拼接后的新的路径
+
+'''</span>
+
+<span class="token keyword">import</span> os
+
+<span class="token comment"># print(os.path)  # &lt;module 'ntpath' from 'C:\\Python39\\lib\\ntpath.py'&gt;</span>
+<span class="token comment"># # ------------分割线-----------------</span>
+<span class="token comment"># path = os.path.dirname(__file__)  # 获取当前文件所在的文件目录（绝对路径）</span>
+<span class="token comment"># print(path)  # D:\BaiduNetdiskDownload\1-Python语言基础\1-Python语言基础\1.12-函数高级用法和文件操作\代码\day12_函数</span>
+<span class="token comment"># print(type(path))  # &lt;class 'str'&gt;</span>
+<span class="token comment"># ------------分割线-----------------</span>
+<span class="token comment"># 将文件名加入到路径中</span>
+<span class="token comment"># result = os.path.join(path, 'a1.jpg')</span>
+<span class="token comment"># print(result)</span>
+<span class="token comment"># ------------分割线-----------------</span>
+<span class="token comment"># D:\work\logo.jpg ----&gt;保存在当前文件所在的目录</span>
+
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">r'D:\work\logo.jpg'</span><span class="token punctuation">,</span> <span class="token string">'rb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> stream<span class="token punctuation">:</span>
+    container <span class="token operator">=</span> stream<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 读取文件内容</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>stream<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+    <span class="token builtin">file</span> <span class="token operator">=</span> stream<span class="token punctuation">.</span>name
+    filename <span class="token operator">=</span> <span class="token builtin">file</span><span class="token punctuation">[</span><span class="token builtin">file</span><span class="token punctuation">.</span>rfind<span class="token punctuation">(</span><span class="token string">'\\'</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span>  <span class="token comment"># 截取文件名</span>
+
+    path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>dirname<span class="token punctuation">(</span>__file__<span class="token punctuation">)</span>
+    path1 <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>path<span class="token punctuation">,</span> filename<span class="token punctuation">)</span>
+
+    <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>path1<span class="token punctuation">,</span> <span class="token string">'wb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> wstream<span class="token punctuation">:</span>
+        wstream<span class="token punctuation">.</span>write<span class="token punctuation">(</span>container<span class="token punctuation">)</span>
+
+        
+        	
+            
+<span class="token comment"># with open('a1.txt', 'w') as wstream:</span>
+<span class="token comment">#     wstream.write('hello')</span>
+
+<span class="token keyword">import</span> os
+
+<span class="token comment"># 判断是否是一个绝对路径</span>
+r <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>isabs<span class="token punctuation">(</span><span class="token string">r'D:\work\logo.jpg'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'----》'</span><span class="token punctuation">,</span> r<span class="token punctuation">)</span>
+
+r <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>isabs<span class="token punctuation">(</span><span class="token string">'../../images/girl.jpg'</span><span class="token punctuation">)</span>  <span class="token comment"># ../ 表示返回当前文件的上一级  code</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'-----&gt;'</span><span class="token punctuation">,</span> r<span class="token punctuation">)</span>
+
+r <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>isabs<span class="token punctuation">(</span><span class="token string">'images/girl.jpg'</span><span class="token punctuation">)</span>  <span class="token comment"># 找跟file01.py同级的images里面的girl.jpg</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'-----&gt;'</span><span class="token punctuation">,</span> r<span class="token punctuation">)</span>
+<span class="token comment"># ---------------分隔符----------------</span>
+<span class="token comment"># 获取路径：directory 目录  文件夹</span>
+<span class="token comment"># 当前文件所在文件夹路径</span>
+path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>dirname<span class="token punctuation">(</span>__file__<span class="token punctuation">)</span>  <span class="token comment"># C:/Users/running/Desktop/python基础/day13(6-14)/代码/day13_文件/code/aa</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span>
+<span class="token comment"># ---------------分隔符----------------</span>
+<span class="token comment"># 通过相对路径得到绝对路径</span>
+<span class="token comment"># D:\BaiduNetdiskDownload\1-Python语言基础\1-Python语言基础\1.13-异常处理\代码\day13_文件\code\aa\aa.txt</span>
+path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>abspath<span class="token punctuation">(</span><span class="token string">'aa.txt'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span>
+<span class="token comment"># ---------------分隔符----------------</span>
+<span class="token comment"># 获取当前文件的绝对路径</span>
+<span class="token comment"># D:\BaiduNetdiskDownload\1-Python语言基础\1-Python语言基础\1.13-异常处理\代码\day13_文件\code\aa\file01.py</span>
+path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>abspath<span class="token punctuation">(</span>__file__<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span>
+<span class="token comment"># ---------------分隔符----------------</span>
+<span class="token comment"># D:\BaiduNetdiskDownload\1-Python语言基础\1-Python语言基础\1.13-异常处理\代码\day13_文件\code\aa</span>
+<span class="token comment"># 当前文件所在文件夹路径</span>
+path <span class="token operator">=</span> os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 类似 os.path.dirname(__file__)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span>
+<span class="token comment"># ---------------分隔符----------------</span>
+<span class="token comment"># 判断是否是一个文件</span>
+<span class="token comment"># r = os.path.isfile(os.getcwd())</span>
+<span class="token comment"># print(r)</span>
+
+<span class="token comment"># 判断是否是一个文件夹</span>
+<span class="token comment"># r = os.path.isdir(os.getcwd())</span>
+<span class="token comment"># print(r)</span>
+<span class="token comment"># ---------------分隔符----------------</span>
+<span class="token comment"># os.path</span>
+
+path <span class="token operator">=</span> <span class="token string">r'D:\BaiduNetdiskDownload\1-Python语言基础\1-Python语言基础\1.13-异常处理\代码\day13_文件\code\aa\file01.py'</span>
+
+result <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>split<span class="token punctuation">(</span>path<span class="token punctuation">)</span>
+<span class="token comment"># ---------------分隔符----------------</span>
+<span class="token comment"># ('D:\\BaiduNetdiskDownload\\1-Python语言基础\\1-Python语言基础\\1.13-异常处理\\代码\\day13_文件\\code\\aa', 'file01.py')</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+<span class="token comment"># 获取文件名file01.py</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># file01.py         等价于 filename = path[path.rfind('\\')+1:]</span>
+<span class="token comment"># ---------------分隔符----------------</span>
+result <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>splitext<span class="token punctuation">(</span>path<span class="token punctuation">)</span>  <span class="token comment"># 分割文件与扩展名</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+<span class="token comment"># ('D:\\BaiduNetdiskDownload\\1-Python语言基础\\1-Python语言基础\\1.13-异常处理\\代码\\day13_文件\\code\\aa\\file01', '.py')</span>
+<span class="token comment"># ---------------分隔符----------------</span>
+size <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>getsize<span class="token punctuation">(</span>path<span class="token punctuation">)</span>  <span class="token comment"># 获取文件的大小  单位字节</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>size<span class="token punctuation">)</span>  <span class="token comment"># 2334</span>
+<span class="token comment"># ---------------分隔符----------------</span>
+<span class="token comment"># 添加路径,每添加一个,路径会多一层</span>
+result <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'file'</span><span class="token punctuation">,</span> <span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'a1.jpg'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+<span class="token comment"># D:\BaiduNetdiskDownload\1-Python语言基础\1-Python语言基础\1.13-异常处理\代码\day13_文件\code\aa\file\a\a1.jpg</span>
+
+<span class="token triple-quoted-string string">'''
+os.path: 常用函数
+ dirname()
+ join()
+ split()
+ splittext()
+ getsize()
+
+ isabs()
+ isfile()
+ isdir()
+
+'''</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br></div></div><h3 id="_9-5-2-os常用函数"><a href="#_9-5-2-os常用函数" class="header-anchor">#</a> 9.5.2 OS常用函数</h3> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># os中函数：</span>
+<span class="token keyword">import</span> os
+
+<span class="token builtin">dir</span> <span class="token operator">=</span> os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">dir</span><span class="token punctuation">)</span>
+
+<span class="token builtin">all</span> <span class="token operator">=</span> os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span><span class="token string">r'D:\work'</span><span class="token punctuation">)</span>  <span class="token comment"># 返回指定目录下的所有的文件和文件夹,保存到列表中</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">all</span><span class="token punctuation">)</span>  <span class="token comment"># ['a1.doc', 'aa.txt', 'logo.jpg', 'WeChat']</span>
+
+<span class="token comment"># 创建文件夹</span>
+<span class="token keyword">if</span> <span class="token keyword">not</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span><span class="token string">r'D:\work3'</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    f <span class="token operator">=</span> os<span class="token punctuation">.</span>mkdir<span class="token punctuation">(</span><span class="token string">r'D:\work3'</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>f<span class="token punctuation">)</span>
+
+<span class="token comment"># f = os.rmdir(r'D:\work3')  # 只能删除空的文件夹  OSError: [WinError 145] 目录不是空的。: 'D:\\work3'</span>
+<span class="token comment"># print(f)</span>
+
+<span class="token comment"># f = os.removedirs(r'D:\work3')  # OSError: [WinError 145] 目录不是空的。: 'D:\\work3'</span>
+<span class="token comment"># print(f)</span>
+
+<span class="token comment"># 删除aa.txt文件</span>
+<span class="token comment"># os.remove(r'D:\work3\work4\aa.txt')</span>
+
+<span class="token comment"># # 删除p4文件夹</span>
+<span class="token comment"># path = r'D:\work3\work4'</span>
+<span class="token comment">#</span>
+<span class="token comment"># filelist = os.listdir(path)  # ['a1.txt', 'a2.txt', 'aa.txt']</span>
+<span class="token comment"># print(filelist)</span>
+<span class="token comment">#</span>
+<span class="token comment"># for file in filelist:</span>
+<span class="token comment">#     path1 = os.path.join(path, file)</span>
+<span class="token comment">#     os.remove(path1)</span>
+<span class="token comment"># else:</span>
+<span class="token comment">#     # 删除work4文件夹中的文件,再删除work4文件夹</span>
+<span class="token comment">#     os.rmdir(path)</span>
+<span class="token comment">#</span>
+<span class="token comment"># print('删除成功！')</span>
+
+<span class="token comment"># 切换目录</span>
+
+path <span class="token operator">=</span> os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span>  <span class="token comment"># D:\BaiduNetdiskDownload\1-Python语言基础\1-Python语言基础\1.13-异常处理\代码\day13_文件</span>
+
+f <span class="token operator">=</span> os<span class="token punctuation">.</span>chdir<span class="token punctuation">(</span><span class="token string">r'D:\work1'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>f<span class="token punctuation">)</span>  <span class="token comment"># None</span>
+
+path <span class="token operator">=</span> os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span>  <span class="token comment"># D:\work1</span>
+
+<span class="token triple-quoted-string string">'''
+os模块下方法:
+os.getcwd()  获取当前目录
+os.listdir()  浏览文件夹
+os.mkdir()  创建文件夹
+os.rmdir()  删除空的文件夹
+os.remove()  删除文件
+os.chdir()  切换目录
+
+'''</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新于:</span> <span class="time">9/21/2021, 3:17:11 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/guide/Python/python入门基础-8.html" class="prev">
+        装饰器和匿名函数
+      </a></span> <span class="next"><a href="/blog/guide/Python/python入门基础-10.html">
+        异常处理
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.a8766d76.js" defer></script><script src="/blog/assets/js/2.7533f6e6.js" defer></script><script src="/blog/assets/js/49.7d93d048.js" defer></script>
+  </body>
+</html>

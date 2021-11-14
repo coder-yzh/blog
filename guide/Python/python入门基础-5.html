@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>列表使用入门 | Coderyzh的博客</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/blog/logo.jpg">
+    <meta name="description" content="冲鸭！">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.9a55a594.css" as="style"><link rel="preload" href="/blog/assets/js/app.a8766d76.js" as="script"><link rel="preload" href="/blog/assets/js/2.7533f6e6.js" as="script"><link rel="preload" href="/blog/assets/js/45.c3f3857d.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.885c6e23.js"><link rel="prefetch" href="/blog/assets/js/11.ffa3d654.js"><link rel="prefetch" href="/blog/assets/js/12.2ea34cef.js"><link rel="prefetch" href="/blog/assets/js/13.e20da210.js"><link rel="prefetch" href="/blog/assets/js/14.88d3e5c6.js"><link rel="prefetch" href="/blog/assets/js/15.fa0e7cb3.js"><link rel="prefetch" href="/blog/assets/js/16.10f56bfd.js"><link rel="prefetch" href="/blog/assets/js/17.e7f7036a.js"><link rel="prefetch" href="/blog/assets/js/18.0a46a51c.js"><link rel="prefetch" href="/blog/assets/js/19.3a71ffa9.js"><link rel="prefetch" href="/blog/assets/js/20.6dd9f744.js"><link rel="prefetch" href="/blog/assets/js/21.363db7c8.js"><link rel="prefetch" href="/blog/assets/js/22.85b912f6.js"><link rel="prefetch" href="/blog/assets/js/23.e1c78269.js"><link rel="prefetch" href="/blog/assets/js/24.87712464.js"><link rel="prefetch" href="/blog/assets/js/25.01d111c9.js"><link rel="prefetch" href="/blog/assets/js/26.5384d46a.js"><link rel="prefetch" href="/blog/assets/js/27.06a77ce7.js"><link rel="prefetch" href="/blog/assets/js/28.dee28251.js"><link rel="prefetch" href="/blog/assets/js/29.8735c1bd.js"><link rel="prefetch" href="/blog/assets/js/3.d2a5d2b1.js"><link rel="prefetch" href="/blog/assets/js/30.e01f8138.js"><link rel="prefetch" href="/blog/assets/js/31.f006e3c9.js"><link rel="prefetch" href="/blog/assets/js/32.ba3efeab.js"><link rel="prefetch" href="/blog/assets/js/33.9c85da1b.js"><link rel="prefetch" href="/blog/assets/js/34.991fc479.js"><link rel="prefetch" href="/blog/assets/js/35.77a02eab.js"><link rel="prefetch" href="/blog/assets/js/36.8c000e42.js"><link rel="prefetch" href="/blog/assets/js/37.c7e4dcad.js"><link rel="prefetch" href="/blog/assets/js/38.9c8583e2.js"><link rel="prefetch" href="/blog/assets/js/39.f78da62b.js"><link rel="prefetch" href="/blog/assets/js/4.bf5a800a.js"><link rel="prefetch" href="/blog/assets/js/40.7e03ec5e.js"><link rel="prefetch" href="/blog/assets/js/41.0e2cafc7.js"><link rel="prefetch" href="/blog/assets/js/42.c82482dd.js"><link rel="prefetch" href="/blog/assets/js/43.f1609a1d.js"><link rel="prefetch" href="/blog/assets/js/44.1e8bad32.js"><link rel="prefetch" href="/blog/assets/js/46.d18b5371.js"><link rel="prefetch" href="/blog/assets/js/47.be4f4a89.js"><link rel="prefetch" href="/blog/assets/js/48.dfcceb94.js"><link rel="prefetch" href="/blog/assets/js/49.7d93d048.js"><link rel="prefetch" href="/blog/assets/js/5.7365f518.js"><link rel="prefetch" href="/blog/assets/js/50.1df2a5f5.js"><link rel="prefetch" href="/blog/assets/js/51.adcdc2be.js"><link rel="prefetch" href="/blog/assets/js/52.f6515f82.js"><link rel="prefetch" href="/blog/assets/js/53.095ddcba.js"><link rel="prefetch" href="/blog/assets/js/54.eaa84284.js"><link rel="prefetch" href="/blog/assets/js/55.b703f464.js"><link rel="prefetch" href="/blog/assets/js/56.c92ce5f3.js"><link rel="prefetch" href="/blog/assets/js/57.fd601ef9.js"><link rel="prefetch" href="/blog/assets/js/58.82d39220.js"><link rel="prefetch" href="/blog/assets/js/59.61dd1284.js"><link rel="prefetch" href="/blog/assets/js/6.f942c28c.js"><link rel="prefetch" href="/blog/assets/js/60.4af561a9.js"><link rel="prefetch" href="/blog/assets/js/61.7e8ed391.js"><link rel="prefetch" href="/blog/assets/js/62.1b129d44.js"><link rel="prefetch" href="/blog/assets/js/63.1e8d0aea.js"><link rel="prefetch" href="/blog/assets/js/64.19d67993.js"><link rel="prefetch" href="/blog/assets/js/65.745f941d.js"><link rel="prefetch" href="/blog/assets/js/66.9cb5dd0f.js"><link rel="prefetch" href="/blog/assets/js/67.ee361403.js"><link rel="prefetch" href="/blog/assets/js/68.24bd88ba.js"><link rel="prefetch" href="/blog/assets/js/69.6fdc256e.js"><link rel="prefetch" href="/blog/assets/js/7.85e210d5.js"><link rel="prefetch" href="/blog/assets/js/70.23607091.js"><link rel="prefetch" href="/blog/assets/js/71.fdfa3eb3.js"><link rel="prefetch" href="/blog/assets/js/72.4cc9b63f.js"><link rel="prefetch" href="/blog/assets/js/73.63bde3dc.js"><link rel="prefetch" href="/blog/assets/js/74.903eb92e.js"><link rel="prefetch" href="/blog/assets/js/75.94c5054f.js"><link rel="prefetch" href="/blog/assets/js/76.e626847b.js"><link rel="prefetch" href="/blog/assets/js/77.72e060da.js"><link rel="prefetch" href="/blog/assets/js/78.0baed4f6.js"><link rel="prefetch" href="/blog/assets/js/79.5954565b.js"><link rel="prefetch" href="/blog/assets/js/8.baf7966e.js"><link rel="prefetch" href="/blog/assets/js/80.c7a4a11c.js"><link rel="prefetch" href="/blog/assets/js/81.813b9331.js"><link rel="prefetch" href="/blog/assets/js/82.eb753c9b.js"><link rel="prefetch" href="/blog/assets/js/83.14a3f24e.js"><link rel="prefetch" href="/blog/assets/js/84.cbf28e40.js"><link rel="prefetch" href="/blog/assets/js/85.5fc0e4b4.js"><link rel="prefetch" href="/blog/assets/js/86.66768a8e.js"><link rel="prefetch" href="/blog/assets/js/87.ef19bf66.js"><link rel="prefetch" href="/blog/assets/js/88.b1aac405.js"><link rel="prefetch" href="/blog/assets/js/89.4aa0624d.js"><link rel="prefetch" href="/blog/assets/js/9.b07dbdb4.js"><link rel="prefetch" href="/blog/assets/js/90.9088e008.js"><link rel="prefetch" href="/blog/assets/js/91.9f86ae39.js"><link rel="prefetch" href="/blog/assets/js/92.526f6f0a.js"><link rel="prefetch" href="/blog/assets/js/93.4a0668ae.js"><link rel="prefetch" href="/blog/assets/js/94.6d97004d.js"><link rel="prefetch" href="/blog/assets/js/95.2988fcde.js"><link rel="prefetch" href="/blog/assets/js/96.83fccfac.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.9a55a594.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">Coderyzh的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/blog/learn/学习汇报记录/第一周学习汇报记录2021-9-19.html" class="nav-link">
+  研路之行
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具箱" class="dropdown-title"><span class="title">工具箱</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具箱" class="mobile-dropdown-title"><span class="title">工具箱</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          在线编辑
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://tinypng.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  图片压缩
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          在线服务
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.aliyun.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  阿里云
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://cloud.tencent.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  腾讯云
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          博客指南
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://juejin.im/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://blog.csdn.net/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CSDN
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/blog/learn/学习汇报记录/第一周学习汇报记录2021-9-19.html" class="nav-link">
+  研路之行
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具箱" class="dropdown-title"><span class="title">工具箱</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具箱" class="mobile-dropdown-title"><span class="title">工具箱</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          在线编辑
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://tinypng.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  图片压缩
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          在线服务
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.aliyun.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  阿里云
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://cloud.tencent.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  腾讯云
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          博客指南
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://juejin.im/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://blog.csdn.net/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CSDN
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据结构与算法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Machine learning</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Machine Learning with Graphs</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Python</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/guide/Python/python入门基础-0.html" class="sidebar-link">python入门基础</a></li><li><a href="/blog/guide/Python/python入门基础-1.html" class="sidebar-link">Python概述和基本语法</a></li><li><a href="/blog/guide/Python/python入门基础-2.html" class="sidebar-link">运算符的应用和分支结构</a></li><li><a href="/blog/guide/Python/python入门基础-3.html" class="sidebar-link">循环结构</a></li><li><a href="/blog/guide/Python/python入门基础-4.html" class="sidebar-link">字符串的应用</a></li><li><a href="/blog/guide/Python/python入门基础-5.html" class="active sidebar-link">列表使用入门</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/guide/Python/python入门基础-5.html#_5-1-今日学习总结" class="sidebar-link">5.1 今日学习总结</a></li><li class="sidebar-sub-header"><a href="/blog/guide/Python/python入门基础-5.html#_5-2列表切片索引" class="sidebar-link">5.2列表切片索引</a></li><li class="sidebar-sub-header"><a href="/blog/guide/Python/python入门基础-5.html#_5-3列表增删改查" class="sidebar-link">5.3列表增删改查</a></li><li class="sidebar-sub-header"><a href="/blog/guide/Python/python入门基础-5.html#_5-4列表练习" class="sidebar-link">5.4列表练习</a></li></ul></li><li><a href="/blog/guide/Python/python入门基础-6.html" class="sidebar-link">元组和字典的应用</a></li><li><a href="/blog/guide/Python/python入门基础-7.html" class="sidebar-link">函数入门</a></li><li><a href="/blog/guide/Python/python入门基础-8.html" class="sidebar-link">装饰器和匿名函数</a></li><li><a href="/blog/guide/Python/python入门基础-9.html" class="sidebar-link">文件操作和OS模块</a></li><li><a href="/blog/guide/Python/python入门基础-10.html" class="sidebar-link">异常处理</a></li><li><a href="/blog/guide/Python/python入门基础-11.html" class="sidebar-link">列表推导式和生成器</a></li><li><a href="/blog/guide/Python/python入门基础-12.html" class="sidebar-link">面向对象入门</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>前端</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>面试问题集</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>其他</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="列表使用入门"><a href="#列表使用入门" class="header-anchor">#</a> 列表使用入门</h1> <h2 id="_5-1-今日学习总结"><a href="#_5-1-今日学习总结" class="header-anchor">#</a> 5.1 今日学习总结</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>1、切片与字符串同，注意方向，步长
+2、列表的增删改查，注意不同删除函数的功能和特点
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="_5-2列表切片索引"><a href="#_5-2列表切片索引" class="header-anchor">#</a> 5.2列表切片索引</h2> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token triple-quoted-string string">'''
+列表
+'''</span>
+<span class="token comment"># shoppingcar = []</span>
+<span class="token comment">#</span>
+<span class="token comment"># while True:</span>
+<span class="token comment">#     name = input('商品:')</span>
+<span class="token comment">#     price = input('价格:')</span>
+<span class="token comment">#     number = input('数量:')</span>
+<span class="token comment">#</span>
+<span class="token comment"># print('清单')</span>
+
+<span class="token triple-quoted-string string">'''
+如何定义一个列表：
+1.空列表:[]
+2.有内容的列表:['A','B','C'],[1,2,3,4],[3.5,9.9,10],[[],[],[]]
+
+
+数据类型：
+int 1 2 3 4 5 6 7
+float 1.9 2.8
+str ' '
+bool True False
+list
+
+'''</span>
+
+list1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token comment"># print(type(list1))  # &lt;class 'list'&gt;</span>
+
+list2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'牛奶'</span><span class="token punctuation">,</span> <span class="token string">'面包'</span><span class="token punctuation">,</span> <span class="token string">'火腿肠'</span><span class="token punctuation">,</span> <span class="token string">'辣条'</span><span class="token punctuation">,</span> <span class="token string">'臭豆腐'</span><span class="token punctuation">,</span> <span class="token string">'食盐'</span><span class="token punctuation">,</span> <span class="token string">'方便面'</span><span class="token punctuation">]</span>
+<span class="token comment"># 对应索引下标，从0开始</span>
+
+
+<span class="token comment"># 获取列表里面的元素，通过索引（下标）</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>list2<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>list2<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 切片练习 类似于字符串操作</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>list2<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>list2<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">:</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>list2<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>list2<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>list2<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>list2<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">5</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>list2<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>list2<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>list2<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># s = 'abcd123'</span>
+<span class="token comment"># for i in range(10):  # 0 1 2 3 ...</span>
+<span class="token comment">#     print(i)</span>
+<span class="token comment">#</span>
+<span class="token comment"># for i in s:  # a b c d 1 2 3</span>
+<span class="token comment">#     print(i)</span>
+<span class="token comment">#</span>
+<span class="token comment"># s = 0</span>
+<span class="token comment"># for i in 'as1d893hdnc12':</span>
+<span class="token comment">#     if i.isdigit():</span>
+<span class="token comment">#         s += int(i)</span>
+<span class="token comment"># print(s)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br></div></div><h2 id="_5-3列表增删改查"><a href="#_5-3列表增删改查" class="header-anchor">#</a> 5.3列表增删改查</h2> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token triple-quoted-string string">'''
+删除：pop remove clear
+pop(index):根据下标删除列表中元素，下标在写的时候要注意不要超出范围 index out of range
+pop():从后往前依次删除
+
+remove(element):根据元素名称删除
+1、如果删除的元素不在列表内，则报错-&gt;ValueError: list.remove(x): x not in list
+2、关键字in：元素 in 列表  -&gt;表示元素是否在列表中？ 返回值：bool
+3、如果列表中存在多个同名元素element，只删除遇到的第一个元素，后面的元素不会被删除，从左往右
+
+clear():清空列表
+'''</span>
+
+list1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'火腿肠'</span><span class="token punctuation">,</span> <span class="token string">'酸奶'</span><span class="token punctuation">,</span> <span class="token string">'酸奶'</span><span class="token punctuation">,</span> <span class="token string">'辣条'</span><span class="token punctuation">,</span> <span class="token string">'面包'</span><span class="token punctuation">,</span> <span class="token string">'薯条'</span><span class="token punctuation">,</span> <span class="token string">'酸奶'</span><span class="token punctuation">,</span> <span class="token string">'酸奶'</span><span class="token punctuation">]</span>
+<span class="token comment"># list1.pop(-1)  # 删除薯条</span>
+<span class="token comment"># print(list1)</span>
+<span class="token comment">#</span>
+<span class="token comment"># list1.pop()  # 不加index，默认从后往前依次删除</span>
+<span class="token comment"># print(list1)</span>
+<span class="token comment">#</span>
+<span class="token comment"># list1.pop(8)  # IndexError: pop index out of range，超出下标范围</span>
+<span class="token comment"># print(list1)</span>
+
+<span class="token comment"># remove</span>
+list1<span class="token punctuation">.</span>remove<span class="token punctuation">(</span><span class="token string">'辣条'</span><span class="token punctuation">)</span>  <span class="token comment"># 删除辣条</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>list1<span class="token punctuation">)</span>
+
+<span class="token comment"># list1.remove('辣条啊')  # ValueError: list.remove(x): x not in list</span>
+<span class="token comment"># print(list1)</span>
+
+<span class="token comment"># 判断是否存在要删除的元素 用关键字in 即是否'辣条啊'在列表list1中</span>
+<span class="token comment"># if '辣条啊' in list1:</span>
+<span class="token comment">#     print('存在')</span>
+<span class="token comment"># else:</span>
+<span class="token comment">#     print('不存在')</span>
+
+<span class="token comment"># 如果列表中存在多个同名元素element，只删除遇到的第一个元素，后面的元素不会被删除，从左往右</span>
+<span class="token comment"># list1.remove('酸奶')</span>
+<span class="token comment"># print(list1)</span>
+
+<span class="token comment"># 删除多个元素</span>
+<span class="token comment"># list1 = ['火腿肠', '酸奶', '酸奶', '辣条', '面包', '薯条', '酸奶', '酸奶']</span>
+<span class="token comment"># 错误写法</span>
+<span class="token comment"># for i in list1:</span>
+<span class="token comment">#     if i == '酸奶':</span>
+<span class="token comment">#         list1.remove(i)</span>
+<span class="token comment">#         i -= 1</span>
+<span class="token comment"># print(list1)</span>
+
+<span class="token comment"># 正确写法1</span>
+<span class="token comment"># n = 0</span>
+<span class="token comment"># while n &lt; len(list1):</span>
+<span class="token comment">#     if list1[n] == '酸奶':</span>
+<span class="token comment">#         list1.remove('酸奶')</span>
+<span class="token comment">#     else:</span>
+<span class="token comment">#         n += 1</span>
+<span class="token comment"># print(list1)</span>
+
+<span class="token comment"># 正确写法2</span>
+<span class="token comment"># while '酸奶' in list1:</span>
+<span class="token comment">#     list1.remove('酸奶')</span>
+<span class="token comment"># print(list1)</span>
+
+<span class="token comment"># 正确写法3 倒着往前删除，index不变</span>
+<span class="token comment"># for i in list1[::-1]:</span>
+<span class="token comment">#     if i == '酸奶':</span>
+<span class="token comment">#         list1.remove('酸奶')</span>
+<span class="token comment"># print(list1)</span>
+
+
+<span class="token comment"># clear()</span>
+list1<span class="token punctuation">.</span>clear<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>list1<span class="token punctuation">)</span>
+
+<span class="token triple-quoted-string string">'''
+修改：
+[1,2,3,4,5,6]
+insert(index,element):插队，element占用的index这个位置，其他元素只能往后移动
+index(元素)：根据元素找该元素的位置下标，返回值是下标位置
+修改元素值：
+列表[index]=新值
+'''</span>
+
+list1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span>
+
+<span class="token comment"># list1.insert(1, 8)</span>
+<span class="token comment"># print(list1)</span>
+weizhi <span class="token operator">=</span> list1<span class="token punctuation">.</span>index<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
+list1<span class="token punctuation">[</span>weizhi<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">8</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>list1<span class="token punctuation">)</span>
+
+<span class="token triple-quoted-string string">'''
+查找：
+1、元素 in 列表  返回bool类型         元素 not in 列表
+2、列表.index(元素)  返回元素的下标位置，如果没有此元素则报错
+3、列表.count()    返回整数    返回值为0则表示不存在此元素，存在则返回元素个数
+4、del和clear的区别:
+del list1:删除列表list1的内容，并把指向列表的内存地址的指针删除
+list1.clear():只删除列表list1的内容
+
+'''</span>
+list1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+<span class="token comment"># print(list1.count(5))</span>
+
+<span class="token comment"># del list1[3]</span>
+<span class="token comment"># print(list1)</span>
+
+<span class="token comment"># list1.pop(3)</span>
+<span class="token comment"># print(list1)</span>
+
+<span class="token comment"># list1.clear()</span>
+<span class="token comment"># del list1</span>
+<span class="token comment"># list1.append(1000)</span>
+<span class="token comment"># print(list1)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">(</span>list1<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+list2 <span class="token operator">=</span> list1
+list2<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token number">88</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">(</span>list1<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">(</span>list2<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># list1.clear()</span>
+<span class="token comment"># print(list2)</span>
+<span class="token keyword">del</span> list2
+<span class="token keyword">print</span><span class="token punctuation">(</span>list1<span class="token punctuation">)</span>
+
+<span class="token triple-quoted-string string">'''
+sort
+reverse
+
+'''</span>
+
+<span class="token comment"># # 生成8个1-20之间的随机整数，保存到列表中，遍历打印</span>
+<span class="token comment"># import random</span>
+<span class="token comment">#</span>
+<span class="token comment"># numbers = []</span>
+<span class="token comment"># for i in range(8):</span>
+<span class="token comment">#     ran = random.randint(1, 100)</span>
+<span class="token comment">#     numbers.append(ran)</span>
+<span class="token comment">#     print(ran)</span>
+<span class="token comment">#</span>
+<span class="token comment"># print(numbers)</span>
+<span class="token comment">#</span>
+<span class="token comment"># numbers.reverse()  # 没有排序，单纯的翻转</span>
+<span class="token comment"># print(numbers)</span>
+
+<span class="token comment"># numbers.sort()  # 默认是升序的，可以通过reverse参数控制升序还是降序</span>
+<span class="token comment"># print(numbers)</span>
+
+<span class="token comment"># numbers.sort(reverse=True)  # 降序</span>
+<span class="token comment"># print(numbers)</span>
+
+<span class="token triple-quoted-string string">'''
+生成8个1-100之间的随机整数，保存到列表中
+键盘输入一个1-100之间的整数，将整数插入到排序后的列表中（升降序没有要求）
+
+'''</span>
+<span class="token comment"># 方法一</span>
+<span class="token comment"># import random</span>
+<span class="token comment">#</span>
+<span class="token comment"># dig = []</span>
+<span class="token comment"># for i in range(8):</span>
+<span class="token comment">#     ran = random.randint(1, 100)</span>
+<span class="token comment">#     dig.append(ran)</span>
+<span class="token comment">#</span>
+<span class="token comment"># num = int(input('输入一个1-100的整数：'))</span>
+<span class="token comment"># dig.append(num)</span>
+<span class="token comment"># dig.sort()</span>
+<span class="token comment"># print(dig)</span>
+
+<span class="token comment"># 方法2</span>
+<span class="token comment"># import random</span>
+<span class="token comment">#</span>
+<span class="token comment"># dig = []</span>
+<span class="token comment"># for i in range(8):</span>
+<span class="token comment">#     ran = random.randint(1, 100)</span>
+<span class="token comment">#     dig.append(ran)</span>
+<span class="token comment"># dig.sort(reverse=True)</span>
+<span class="token comment"># num = int(input('输入一个1-100的整数：'))</span>
+<span class="token comment"># for i in range(8):</span>
+<span class="token comment">#     if num &gt; dig[i]:</span>
+<span class="token comment">#         dig.insert(i, num)</span>
+<span class="token comment">#         break</span>
+<span class="token comment"># print(dig)</span>
+
+
+<span class="token comment"># 交换值 python封装好了</span>
+a <span class="token operator">=</span> <span class="token number">2</span>
+b <span class="token operator">=</span> <span class="token number">3</span>
+<span class="token comment"># a, b = b, a</span>
+<span class="token comment"># print(a, b)</span>
+a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c <span class="token operator">=</span> b<span class="token punctuation">,</span> a<span class="token punctuation">,</span> b
+<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">)</span>
+
+<span class="token triple-quoted-string string">'''
+冒泡排序
+'''</span>
+
+<span class="token keyword">import</span> random
+
+dig <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    ran <span class="token operator">=</span> random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span>
+    dig<span class="token punctuation">.</span>append<span class="token punctuation">(</span>ran<span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>dig<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 轮数</span>
+    <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>dig<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span> <span class="token operator">-</span> i<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> dig<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&gt;</span> dig<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>  <span class="token comment"># 两两比较</span>
+            dig<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> dig<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> dig<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> dig<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>dig<span class="token punctuation">)</span>
+
+<span class="token triple-quoted-string string">'''
+添加 删除 修改 查询
+1.添加元素:append() 追加 类似于队列
+'''</span>
+list1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+list2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'面包'</span><span class="token punctuation">]</span>
+
+list1<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">'火腿肠'</span><span class="token punctuation">)</span>
+list1<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">'酸奶'</span><span class="token punctuation">)</span>
+list1<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">'辣条'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>list1<span class="token punctuation">)</span>
+
+list2<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">'薯条'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>list2<span class="token punctuation">)</span>
+
+<span class="token comment"># list1,list2合并</span>
+<span class="token comment"># list1 = list1 + list2</span>
+<span class="token comment"># print(list1)</span>
+list1<span class="token punctuation">.</span>extend<span class="token punctuation">(</span>list2<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>list1<span class="token punctuation">)</span>
+
+<span class="token triple-quoted-string string">'''
++应用范围：
+数字: n=1+3
+字符串: s='aa'+'bb'    -&gt; aabb
+列表: list0=[1,2,3]+['a','b'] -&gt;  [1,2,3,'a','b']
+'''</span>
+
+<span class="token triple-quoted-string string">'''
+买多件：
+商品名称，价格，数量
+要用到列表的嵌套
+
+'''</span>
+container <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>  <span class="token comment"># 存放多件商品的容器</span>
+flag <span class="token operator">=</span> <span class="token boolean">True</span>
+<span class="token keyword">while</span> flag<span class="token punctuation">:</span>
+    <span class="token comment"># 添加商品</span>
+    name <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'商品名称：'</span><span class="token punctuation">)</span>
+    price <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'商品价格：'</span><span class="token punctuation">)</span>
+    number <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'商品数量：'</span><span class="token punctuation">)</span>
+    goods <span class="token operator">=</span> <span class="token punctuation">[</span>name<span class="token punctuation">,</span> price<span class="token punctuation">,</span> number<span class="token punctuation">]</span>
+    <span class="token comment">#   将商品添加到container</span>
+    container<span class="token punctuation">.</span>append<span class="token punctuation">(</span>goods<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>goods<span class="token punctuation">)</span>
+    ans <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'是否继续添加？(按q或Q退出)'</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> ans<span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token string">'q'</span><span class="token punctuation">:</span>
+        flag <span class="token operator">=</span> <span class="token boolean">False</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'*'</span> <span class="token operator">*</span> <span class="token number">20</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 遍历container</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'名称\t价格\t数量'</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> goods <span class="token keyword">in</span> container<span class="token punctuation">:</span>  <span class="token comment"># [[],[],[],...]</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'{}\t{}\t{}'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>goods<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token builtin">float</span><span class="token punctuation">(</span>goods<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">(</span>goods<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br><span class="line-number">198</span><br><span class="line-number">199</span><br><span class="line-number">200</span><br><span class="line-number">201</span><br><span class="line-number">202</span><br><span class="line-number">203</span><br><span class="line-number">204</span><br><span class="line-number">205</span><br><span class="line-number">206</span><br><span class="line-number">207</span><br><span class="line-number">208</span><br><span class="line-number">209</span><br><span class="line-number">210</span><br><span class="line-number">211</span><br><span class="line-number">212</span><br><span class="line-number">213</span><br><span class="line-number">214</span><br><span class="line-number">215</span><br><span class="line-number">216</span><br><span class="line-number">217</span><br><span class="line-number">218</span><br><span class="line-number">219</span><br><span class="line-number">220</span><br><span class="line-number">221</span><br><span class="line-number">222</span><br><span class="line-number">223</span><br><span class="line-number">224</span><br><span class="line-number">225</span><br><span class="line-number">226</span><br><span class="line-number">227</span><br><span class="line-number">228</span><br><span class="line-number">229</span><br><span class="line-number">230</span><br><span class="line-number">231</span><br><span class="line-number">232</span><br><span class="line-number">233</span><br><span class="line-number">234</span><br><span class="line-number">235</span><br><span class="line-number">236</span><br><span class="line-number">237</span><br><span class="line-number">238</span><br><span class="line-number">239</span><br><span class="line-number">240</span><br><span class="line-number">241</span><br><span class="line-number">242</span><br><span class="line-number">243</span><br><span class="line-number">244</span><br><span class="line-number">245</span><br><span class="line-number">246</span><br><span class="line-number">247</span><br><span class="line-number">248</span><br><span class="line-number">249</span><br><span class="line-number">250</span><br><span class="line-number">251</span><br><span class="line-number">252</span><br><span class="line-number">253</span><br><span class="line-number">254</span><br><span class="line-number">255</span><br><span class="line-number">256</span><br><span class="line-number">257</span><br><span class="line-number">258</span><br><span class="line-number">259</span><br><span class="line-number">260</span><br><span class="line-number">261</span><br><span class="line-number">262</span><br><span class="line-number">263</span><br><span class="line-number">264</span><br><span class="line-number">265</span><br><span class="line-number">266</span><br><span class="line-number">267</span><br><span class="line-number">268</span><br><span class="line-number">269</span><br><span class="line-number">270</span><br></div></div><h2 id="_5-4列表练习"><a href="#_5-4列表练习" class="header-anchor">#</a> 5.4列表练习</h2> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token triple-quoted-string string">'''
+王者荣耀角色管理
+
+角色：姓名，性别，职业
+
+添加角色
+删除角色
+修改角色
+查询角色 单个角色
+显示所有角色
+退出管理系统
+'''</span>
+<span class="token keyword">import</span> time
+<span class="token keyword">import</span> random
+
+all_role <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>  <span class="token comment"># 存放所有角色的'大容器'</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'~~~~~~~~~欢迎进入王者荣耀角色管理~~~~~~~~~'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+    choice <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'请选择功能:\n1.添加角色\n2.删除角色\n3.修改角色\n4.查询角色\n5.显示所有角色\n6.退出管理系统\n'</span><span class="token punctuation">)</span>
+    <span class="token comment"># 判断</span>
+    <span class="token keyword">if</span> choice <span class="token operator">==</span> <span class="token string">'1'</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'添加角色模块：'</span><span class="token punctuation">)</span>
+        name <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'角色名：'</span><span class="token punctuation">)</span>
+        sex <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'性别：'</span><span class="token punctuation">)</span>
+        job <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'职业：'</span><span class="token punctuation">)</span>
+        role <span class="token operator">=</span> <span class="token punctuation">[</span>name<span class="token punctuation">,</span> sex<span class="token punctuation">,</span> job<span class="token punctuation">]</span>
+        <span class="token comment"># 添加到all_role</span>
+        all_role<span class="token punctuation">.</span>append<span class="token punctuation">(</span>role<span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'\t成功添加{}到王者荣耀系统！\n'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">elif</span> choice <span class="token operator">==</span> <span class="token string">'2'</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'删除角色模块：'</span><span class="token punctuation">)</span>
+        role_name <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'输入角色名：'</span><span class="token punctuation">)</span>
+        <span class="token comment"># 查找是否存在此角色名称</span>
+        <span class="token keyword">for</span> role <span class="token keyword">in</span> all_role<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> role_name <span class="token keyword">in</span> role<span class="token punctuation">:</span>
+                <span class="token comment"># 添加一个是否确认删除询问，确认删除则再删除</span>
+                s <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'是否确认删除角色：{}(y/n)'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>role_name<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token keyword">if</span> s <span class="token operator">==</span> <span class="token string">'y'</span><span class="token punctuation">:</span>
+                    all_role<span class="token punctuation">.</span>remove<span class="token punctuation">(</span>role<span class="token punctuation">)</span>
+                    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'成功删除角色：{}'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>role_name<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                    <span class="token keyword">break</span>
+                <span class="token keyword">else</span><span class="token punctuation">:</span>
+                    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'取消删除角色：{}'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>role_name<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'本系统不存在角色：{},请检查角色名称.'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>role_name<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">elif</span> choice <span class="token operator">==</span> <span class="token string">'3'</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'修改角色模块：'</span><span class="token punctuation">)</span>
+        role_name <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'输入角色名：'</span><span class="token punctuation">)</span>
+        <span class="token comment"># 查找是否存在此角色名称</span>
+        <span class="token keyword">for</span> role <span class="token keyword">in</span> all_role<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> role_name <span class="token keyword">in</span> role<span class="token punctuation">:</span>
+                <span class="token comment"># 添加一个是否确认修改询问，确认修改则再修改</span>
+                s <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'是否确认修改角色：{}(y/n)'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>role_name<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token keyword">if</span> s <span class="token operator">==</span> <span class="token string">'y'</span><span class="token punctuation">:</span>
+                    role<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'请输入修改后的角色名：'</span><span class="token punctuation">)</span>
+                    role<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'请输入修改后的性别：'</span><span class="token punctuation">)</span>
+                    role<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'请输入修改后的职业：'</span><span class="token punctuation">)</span>
+
+                    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'成功修改角色：{}'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>role_name<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                    <span class="token keyword">break</span>
+                <span class="token keyword">else</span><span class="token punctuation">:</span>
+                    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'取消修改角色：{}'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>role_name<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'本系统不存在角色：{},请检查角色名称.'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>role_name<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">elif</span> choice <span class="token operator">==</span> <span class="token string">'4'</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'查询角色模块：'</span><span class="token punctuation">)</span>
+        role_name <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'输入角色名：'</span><span class="token punctuation">)</span>
+        <span class="token comment"># 查找是否存在此角色名称</span>
+        <span class="token keyword">for</span> role <span class="token keyword">in</span> all_role<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> role_name <span class="token keyword">in</span> role<span class="token punctuation">:</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'\t存在此角色信息如下:'</span><span class="token punctuation">)</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'\t{}{}{}'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>role<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>center<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span> role<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>center<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span> role<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span>center<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token keyword">break</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'本系统不存在角色：{},请检查角色名称.'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>role_name<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">elif</span> choice <span class="token operator">==</span> <span class="token string">'5'</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'显示所有角色模块~~~~'</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'{}{}{}'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span><span class="token string">'名称'</span><span class="token punctuation">.</span>center<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'性别'</span><span class="token punctuation">.</span>center<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'职业'</span><span class="token punctuation">.</span>center<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> role <span class="token keyword">in</span> all_role<span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>role<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>center<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">''</span><span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>role<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>center<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">''</span><span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>role<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span>center<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">elif</span> choice <span class="token operator">==</span> <span class="token string">'6'</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'正在退出王者荣耀管理系统~~~~'</span><span class="token punctuation">)</span>
+        time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'成功退出！'</span><span class="token punctuation">)</span>
+        <span class="token keyword">break</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'输入错误，请重新选择！'</span><span class="token punctuation">)</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新于:</span> <span class="time">9/20/2021, 10:27:04 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/guide/Python/python入门基础-4.html" class="prev">
+        字符串的应用
+      </a></span> <span class="next"><a href="/blog/guide/Python/python入门基础-6.html">
+        元组和字典的应用
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.a8766d76.js" defer></script><script src="/blog/assets/js/2.7533f6e6.js" defer></script><script src="/blog/assets/js/45.c3f3857d.js" defer></script>
+  </body>
+</html>

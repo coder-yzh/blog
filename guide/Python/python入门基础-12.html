@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>面向对象入门 | Coderyzh的博客</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/blog/logo.jpg">
+    <meta name="description" content="冲鸭！">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.9a55a594.css" as="style"><link rel="preload" href="/blog/assets/js/app.a8766d76.js" as="script"><link rel="preload" href="/blog/assets/js/2.7533f6e6.js" as="script"><link rel="preload" href="/blog/assets/js/41.0e2cafc7.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.885c6e23.js"><link rel="prefetch" href="/blog/assets/js/11.ffa3d654.js"><link rel="prefetch" href="/blog/assets/js/12.2ea34cef.js"><link rel="prefetch" href="/blog/assets/js/13.e20da210.js"><link rel="prefetch" href="/blog/assets/js/14.88d3e5c6.js"><link rel="prefetch" href="/blog/assets/js/15.fa0e7cb3.js"><link rel="prefetch" href="/blog/assets/js/16.10f56bfd.js"><link rel="prefetch" href="/blog/assets/js/17.e7f7036a.js"><link rel="prefetch" href="/blog/assets/js/18.0a46a51c.js"><link rel="prefetch" href="/blog/assets/js/19.3a71ffa9.js"><link rel="prefetch" href="/blog/assets/js/20.6dd9f744.js"><link rel="prefetch" href="/blog/assets/js/21.363db7c8.js"><link rel="prefetch" href="/blog/assets/js/22.85b912f6.js"><link rel="prefetch" href="/blog/assets/js/23.e1c78269.js"><link rel="prefetch" href="/blog/assets/js/24.87712464.js"><link rel="prefetch" href="/blog/assets/js/25.01d111c9.js"><link rel="prefetch" href="/blog/assets/js/26.5384d46a.js"><link rel="prefetch" href="/blog/assets/js/27.06a77ce7.js"><link rel="prefetch" href="/blog/assets/js/28.dee28251.js"><link rel="prefetch" href="/blog/assets/js/29.8735c1bd.js"><link rel="prefetch" href="/blog/assets/js/3.d2a5d2b1.js"><link rel="prefetch" href="/blog/assets/js/30.e01f8138.js"><link rel="prefetch" href="/blog/assets/js/31.f006e3c9.js"><link rel="prefetch" href="/blog/assets/js/32.ba3efeab.js"><link rel="prefetch" href="/blog/assets/js/33.9c85da1b.js"><link rel="prefetch" href="/blog/assets/js/34.991fc479.js"><link rel="prefetch" href="/blog/assets/js/35.77a02eab.js"><link rel="prefetch" href="/blog/assets/js/36.8c000e42.js"><link rel="prefetch" href="/blog/assets/js/37.c7e4dcad.js"><link rel="prefetch" href="/blog/assets/js/38.9c8583e2.js"><link rel="prefetch" href="/blog/assets/js/39.f78da62b.js"><link rel="prefetch" href="/blog/assets/js/4.bf5a800a.js"><link rel="prefetch" href="/blog/assets/js/40.7e03ec5e.js"><link rel="prefetch" href="/blog/assets/js/42.c82482dd.js"><link rel="prefetch" href="/blog/assets/js/43.f1609a1d.js"><link rel="prefetch" href="/blog/assets/js/44.1e8bad32.js"><link rel="prefetch" href="/blog/assets/js/45.c3f3857d.js"><link rel="prefetch" href="/blog/assets/js/46.d18b5371.js"><link rel="prefetch" href="/blog/assets/js/47.be4f4a89.js"><link rel="prefetch" href="/blog/assets/js/48.dfcceb94.js"><link rel="prefetch" href="/blog/assets/js/49.7d93d048.js"><link rel="prefetch" href="/blog/assets/js/5.7365f518.js"><link rel="prefetch" href="/blog/assets/js/50.1df2a5f5.js"><link rel="prefetch" href="/blog/assets/js/51.adcdc2be.js"><link rel="prefetch" href="/blog/assets/js/52.f6515f82.js"><link rel="prefetch" href="/blog/assets/js/53.095ddcba.js"><link rel="prefetch" href="/blog/assets/js/54.eaa84284.js"><link rel="prefetch" href="/blog/assets/js/55.b703f464.js"><link rel="prefetch" href="/blog/assets/js/56.c92ce5f3.js"><link rel="prefetch" href="/blog/assets/js/57.fd601ef9.js"><link rel="prefetch" href="/blog/assets/js/58.82d39220.js"><link rel="prefetch" href="/blog/assets/js/59.61dd1284.js"><link rel="prefetch" href="/blog/assets/js/6.f942c28c.js"><link rel="prefetch" href="/blog/assets/js/60.4af561a9.js"><link rel="prefetch" href="/blog/assets/js/61.7e8ed391.js"><link rel="prefetch" href="/blog/assets/js/62.1b129d44.js"><link rel="prefetch" href="/blog/assets/js/63.1e8d0aea.js"><link rel="prefetch" href="/blog/assets/js/64.19d67993.js"><link rel="prefetch" href="/blog/assets/js/65.745f941d.js"><link rel="prefetch" href="/blog/assets/js/66.9cb5dd0f.js"><link rel="prefetch" href="/blog/assets/js/67.ee361403.js"><link rel="prefetch" href="/blog/assets/js/68.24bd88ba.js"><link rel="prefetch" href="/blog/assets/js/69.6fdc256e.js"><link rel="prefetch" href="/blog/assets/js/7.85e210d5.js"><link rel="prefetch" href="/blog/assets/js/70.23607091.js"><link rel="prefetch" href="/blog/assets/js/71.fdfa3eb3.js"><link rel="prefetch" href="/blog/assets/js/72.4cc9b63f.js"><link rel="prefetch" href="/blog/assets/js/73.63bde3dc.js"><link rel="prefetch" href="/blog/assets/js/74.903eb92e.js"><link rel="prefetch" href="/blog/assets/js/75.94c5054f.js"><link rel="prefetch" href="/blog/assets/js/76.e626847b.js"><link rel="prefetch" href="/blog/assets/js/77.72e060da.js"><link rel="prefetch" href="/blog/assets/js/78.0baed4f6.js"><link rel="prefetch" href="/blog/assets/js/79.5954565b.js"><link rel="prefetch" href="/blog/assets/js/8.baf7966e.js"><link rel="prefetch" href="/blog/assets/js/80.c7a4a11c.js"><link rel="prefetch" href="/blog/assets/js/81.813b9331.js"><link rel="prefetch" href="/blog/assets/js/82.eb753c9b.js"><link rel="prefetch" href="/blog/assets/js/83.14a3f24e.js"><link rel="prefetch" href="/blog/assets/js/84.cbf28e40.js"><link rel="prefetch" href="/blog/assets/js/85.5fc0e4b4.js"><link rel="prefetch" href="/blog/assets/js/86.66768a8e.js"><link rel="prefetch" href="/blog/assets/js/87.ef19bf66.js"><link rel="prefetch" href="/blog/assets/js/88.b1aac405.js"><link rel="prefetch" href="/blog/assets/js/89.4aa0624d.js"><link rel="prefetch" href="/blog/assets/js/9.b07dbdb4.js"><link rel="prefetch" href="/blog/assets/js/90.9088e008.js"><link rel="prefetch" href="/blog/assets/js/91.9f86ae39.js"><link rel="prefetch" href="/blog/assets/js/92.526f6f0a.js"><link rel="prefetch" href="/blog/assets/js/93.4a0668ae.js"><link rel="prefetch" href="/blog/assets/js/94.6d97004d.js"><link rel="prefetch" href="/blog/assets/js/95.2988fcde.js"><link rel="prefetch" href="/blog/assets/js/96.83fccfac.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.9a55a594.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">Coderyzh的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/blog/learn/学习汇报记录/第一周学习汇报记录2021-9-19.html" class="nav-link">
+  研路之行
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具箱" class="dropdown-title"><span class="title">工具箱</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具箱" class="mobile-dropdown-title"><span class="title">工具箱</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          在线编辑
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://tinypng.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  图片压缩
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          在线服务
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.aliyun.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  阿里云
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://cloud.tencent.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  腾讯云
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          博客指南
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://juejin.im/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://blog.csdn.net/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CSDN
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/blog/learn/学习汇报记录/第一周学习汇报记录2021-9-19.html" class="nav-link">
+  研路之行
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具箱" class="dropdown-title"><span class="title">工具箱</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具箱" class="mobile-dropdown-title"><span class="title">工具箱</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          在线编辑
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://tinypng.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  图片压缩
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          在线服务
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.aliyun.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  阿里云
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://cloud.tencent.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  腾讯云
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          博客指南
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://juejin.im/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://blog.csdn.net/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CSDN
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据结构与算法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Machine learning</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Machine Learning with Graphs</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Python</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/guide/Python/python入门基础-0.html" class="sidebar-link">python入门基础</a></li><li><a href="/blog/guide/Python/python入门基础-1.html" class="sidebar-link">Python概述和基本语法</a></li><li><a href="/blog/guide/Python/python入门基础-2.html" class="sidebar-link">运算符的应用和分支结构</a></li><li><a href="/blog/guide/Python/python入门基础-3.html" class="sidebar-link">循环结构</a></li><li><a href="/blog/guide/Python/python入门基础-4.html" class="sidebar-link">字符串的应用</a></li><li><a href="/blog/guide/Python/python入门基础-5.html" class="sidebar-link">列表使用入门</a></li><li><a href="/blog/guide/Python/python入门基础-6.html" class="sidebar-link">元组和字典的应用</a></li><li><a href="/blog/guide/Python/python入门基础-7.html" class="sidebar-link">函数入门</a></li><li><a href="/blog/guide/Python/python入门基础-8.html" class="sidebar-link">装饰器和匿名函数</a></li><li><a href="/blog/guide/Python/python入门基础-9.html" class="sidebar-link">文件操作和OS模块</a></li><li><a href="/blog/guide/Python/python入门基础-10.html" class="sidebar-link">异常处理</a></li><li><a href="/blog/guide/Python/python入门基础-11.html" class="sidebar-link">列表推导式和生成器</a></li><li><a href="/blog/guide/Python/python入门基础-12.html" class="active sidebar-link">面向对象入门</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/guide/Python/python入门基础-12.html#_12-1类、属性、方法" class="sidebar-link">12.1类、属性、方法</a></li><li class="sidebar-sub-header"><a href="/blog/guide/Python/python入门基础-12.html#_12-2普通方法" class="sidebar-link">12.2普通方法</a></li><li class="sidebar-sub-header"><a href="/blog/guide/Python/python入门基础-12.html#_12-3魔术方法-init" class="sidebar-link">12.3魔术方法-init()</a></li><li class="sidebar-sub-header"><a href="/blog/guide/Python/python入门基础-12.html#_12-4类方法-classmethod" class="sidebar-link">12.4类方法-classmethod</a></li><li class="sidebar-sub-header"><a href="/blog/guide/Python/python入门基础-12.html#_12-5静态方法-staticmethod" class="sidebar-link">12.5静态方法-staticmethod</a></li><li class="sidebar-sub-header"><a href="/blog/guide/Python/python入门基础-12.html#_12-6魔术方法-new、call" class="sidebar-link">12.6魔术方法-new、call</a></li><li class="sidebar-sub-header"><a href="/blog/guide/Python/python入门基础-12.html#_12-7魔术方法-del" class="sidebar-link">12.7魔术方法-del</a></li><li class="sidebar-sub-header"><a href="/blog/guide/Python/python入门基础-12.html#_12-8魔术方法-str" class="sidebar-link">12.8魔术方法-str</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>前端</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>面试问题集</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>其他</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="面向对象入门"><a href="#面向对象入门" class="header-anchor">#</a> 面向对象入门</h1> <h2 id="_12-1类、属性、方法"><a href="#_12-1类、属性、方法" class="header-anchor">#</a> 12.1类、属性、方法</h2> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token triple-quoted-string string">'''
+面向对象:
+程序          现实中
+对象  ---》 具体的事物
+
+现实中事物---》转成电脑程序。
+世间万物皆对象
+
+好处：
+
+面向对象：
+   类
+   对象
+   属性
+   方法
+
+对象：
+  于鹏的手机
+  晓伟的手机
+  赵飞的手机
+  陈帅的手机
+  ...
+
+  对象的集合  ---&gt; 共同特征： 品牌   颜色  大小   价格     动作：打电话  发短信   上网   打游戏
+
+  类别： 手机类
+         学生类
+    于鹏 ，晓伟，赵飞，陈帅，。。
+
+    特征： 姓名 年龄  性别  身高  血型  婚否   -----&gt;属性
+    动作： 刷抖音  敲代码  看书 ...     -----》方法
+
+    多个对象 ---》提取对象的共同的特征和动作 -----》封装到一个类中
+'''</span>
+<span class="token comment"># 所有的类名要求首字母大写，多个单词使用驼峰式命名</span>
+<span class="token comment"># ValueError  TypeError  StopIterable</span>
+<span class="token triple-quoted-string string">'''
+ class 类名[(父类)]:
+    属性： 特征
+    
+    方法： 动作
+'''</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">Phone</span><span class="token punctuation">:</span>
+    <span class="token comment"># 属性</span>
+    brand <span class="token operator">=</span> <span class="token string">'huawei'</span>
+    <span class="token comment"># 方法</span>
+
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>Phone<span class="token punctuation">)</span>  <span class="token comment"># &lt;class '__main__.Phone'&gt;</span>
+
+<span class="token comment"># 使用类创建对象</span>
+yp <span class="token operator">=</span> Phone<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>yp<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>yp<span class="token punctuation">.</span>brand<span class="token punctuation">)</span>
+yp<span class="token punctuation">.</span>brand <span class="token operator">=</span> <span class="token string">'iphone'</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>yp<span class="token punctuation">.</span>brand<span class="token punctuation">)</span>
+
+feifei <span class="token operator">=</span> Phone<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>feifei<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>feifei<span class="token punctuation">.</span>brand<span class="token punctuation">)</span>
+feifei<span class="token punctuation">.</span>brand <span class="token operator">=</span> <span class="token string">'iphone xxs'</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>feifei<span class="token punctuation">.</span>brand<span class="token punctuation">)</span>
+
+xiaowei <span class="token operator">=</span> Phone<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>xiaowei<span class="token punctuation">.</span>brand<span class="token punctuation">)</span>
+
+<span class="token comment">#------------------------------------------------</span>
+<span class="token comment"># 定义类和属性</span>
+<span class="token keyword">class</span> <span class="token class-name">Student</span><span class="token punctuation">:</span>
+    <span class="token comment"># 类属性</span>
+    name <span class="token operator">=</span> <span class="token string">'xiaowei'</span>
+    age <span class="token operator">=</span> <span class="token number">2</span>
+
+
+xiaowei <span class="token operator">=</span> Student<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># print(xiaowei.gender)  # AttributeError: 'Student' object has no attribute 'gender'</span>
+
+xiaowei<span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">18</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>xiaowei<span class="token punctuation">.</span>age<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>xiaowei<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+
+yupeng <span class="token operator">=</span> Student<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>yupeng<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+
+yupeng<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'xiaopengpeng'</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>yupeng<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>yupeng<span class="token punctuation">.</span>age<span class="token punctuation">)</span>
+
+yupeng<span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>yupeng<span class="token punctuation">.</span>age<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>xiaowei<span class="token punctuation">.</span>age<span class="token punctuation">)</span>
+
+Student<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'feifei'</span>
+
+<span class="token comment"># 修改类属性</span>
+ruirui <span class="token operator">=</span> Student<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>ruirui<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br></div></div><h2 id="_12-2普通方法"><a href="#_12-2普通方法" class="header-anchor">#</a> 12.2普通方法</h2> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># 类中方法：动作</span>
+<span class="token comment"># 种类: 普通方法  类方法  静态方法  魔术方法</span>
+
+<span class="token triple-quoted-string string">'''
+普通方法格式:
+def 方法名(self[,参数，参数])：
+    pass
+
+'''</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">Phone</span><span class="token punctuation">:</span>
+    brand <span class="token operator">=</span> <span class="token string">'xiaomi'</span>
+    price <span class="token operator">=</span> <span class="token number">4999</span>
+    <span class="token builtin">type</span> <span class="token operator">=</span> <span class="token string">'mate 80'</span>
+
+    <span class="token comment"># Phone类里面方法：call</span>
+    <span class="token keyword">def</span> <span class="token function">call</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'self-----------&gt;'</span><span class="token punctuation">,</span> self<span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'正在访问通讯录:'</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> person <span class="token keyword">in</span> self<span class="token punctuation">.</span>address_book<span class="token punctuation">:</span> <span class="token comment"># [{},{}]</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>person<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'正在打电话.....'</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'留言:'</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>note<span class="token punctuation">)</span>
+
+
+phone1 <span class="token operator">=</span> Phone<span class="token punctuation">(</span><span class="token punctuation">)</span>
+phone1<span class="token punctuation">.</span>note <span class="token operator">=</span> <span class="token string">'我是phone1的note'</span>
+phone1<span class="token punctuation">.</span>address_book <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token string">&quot;159008867454&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;于鹏&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string">&quot;159008860000&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;晓伟&quot;</span><span class="token punctuation">}</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>phone1<span class="token punctuation">,</span> <span class="token string">'-------1---'</span><span class="token punctuation">)</span>
+phone1<span class="token punctuation">.</span>call<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># call(phone1)  ---&gt; self.note</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'*'</span> <span class="token operator">*</span> <span class="token number">30</span><span class="token punctuation">)</span>
+phone2 <span class="token operator">=</span> Phone<span class="token punctuation">(</span><span class="token punctuation">)</span>
+phone2<span class="token punctuation">.</span>note <span class="token operator">=</span> <span class="token string">'我是phone22222222的note'</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>phone2<span class="token punctuation">,</span> <span class="token string">'-------2---'</span><span class="token punctuation">)</span>
+phone2<span class="token punctuation">.</span>call<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># call(phone2) ---&gt; self.note</span>
+<span class="token comment"># phone2.note</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br></div></div><h2 id="_12-3魔术方法-init"><a href="#_12-3魔术方法-init" class="header-anchor">#</a> 12.3魔术方法-init()</h2> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># 函数 和  类里面定义的：方法</span>
+<span class="token comment">#</span>
+<span class="token comment"># def func(name):</span>
+<span class="token comment">#     print('----&gt;', name)</span>
+<span class="token comment">#</span>
+<span class="token comment">#</span>
+<span class="token comment"># username = 'admin'</span>
+<span class="token comment"># func(username)</span>
+
+<span class="token keyword">def</span> <span class="token function">func</span><span class="token punctuation">(</span>names<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> name <span class="token keyword">in</span> names<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+
+
+name_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'aa'</span><span class="token punctuation">,</span> <span class="token string">'bb'</span><span class="token punctuation">,</span> <span class="token string">'cc'</span><span class="token punctuation">]</span>
+func<span class="token punctuation">(</span>name_list<span class="token punctuation">)</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">Phone</span><span class="token punctuation">:</span>
+    <span class="token comment"># 魔术方法之一: 称作魔术方法 __名字__()</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># init 初始的，初始化</span>
+        self<span class="token punctuation">.</span>brand <span class="token operator">=</span> <span class="token string">'xiaomi'</span>
+        self<span class="token punctuation">.</span>price <span class="token operator">=</span> <span class="token number">4999</span>
+
+    <span class="token keyword">def</span> <span class="token function">call</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># self是不断发生改变</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'--------&gt;call'</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'价格:'</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>price<span class="token punctuation">)</span>  <span class="token comment"># 不能保证每个self中都存在price</span>
+
+
+p <span class="token operator">=</span> Phone<span class="token punctuation">(</span><span class="token punctuation">)</span>
+p<span class="token punctuation">.</span>call<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+p1 <span class="token operator">=</span> Phone<span class="token punctuation">(</span><span class="token punctuation">)</span>
+p1<span class="token punctuation">.</span>price <span class="token operator">=</span> <span class="token number">5999</span>
+p1<span class="token punctuation">.</span>call<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># p.price = 1000</span>
+<span class="token comment"># p.call()  # p.call()   p对象</span>
+<span class="token comment">#</span>
+<span class="token comment"># p1 = Phone()</span>
+<span class="token comment"># p1.call()</span>
+
+<span class="token comment"># print(Phone.price)</span>
+
+<span class="token comment"># ---------------------------------------------</span>
+<span class="token comment"># init加参数</span>
+<span class="token keyword">class</span> <span class="token class-name">Person</span><span class="token punctuation">:</span>
+    name <span class="token operator">=</span> <span class="token string">'张三'</span>
+
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">,</span> age<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>name <span class="token operator">=</span> name
+        self<span class="token punctuation">.</span>age <span class="token operator">=</span> age
+
+    <span class="token keyword">def</span> <span class="token function">eat</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> food<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'{}正在吃{}！。。。'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>name<span class="token punctuation">,</span> food<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">run</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'{},今年{}岁，正在跑步'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>name<span class="token punctuation">,</span> self<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+
+p <span class="token operator">=</span> Person<span class="token punctuation">(</span><span class="token string">'李四'</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span>
+p<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'lisi'</span>
+p<span class="token punctuation">.</span>eat<span class="token punctuation">(</span><span class="token string">'红烧肉'</span><span class="token punctuation">)</span>
+p<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+p1 <span class="token operator">=</span> Person<span class="token punctuation">(</span><span class="token string">'wangwu'</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">)</span>
+p1<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'王五'</span>
+p1<span class="token punctuation">.</span>eat<span class="token punctuation">(</span><span class="token string">'狮子头'</span><span class="token punctuation">)</span>
+p1<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+p2 <span class="token operator">=</span> Person<span class="token punctuation">(</span><span class="token string">'zhaoliu'</span><span class="token punctuation">,</span> <span class="token number">17</span><span class="token punctuation">)</span>
+p2<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># eat()</span>
+
+<span class="token comment"># --------------------------------------</span>
+<span class="token comment"># 举例，通过对象调用方法</span>
+<span class="token comment"># 猫</span>
+<span class="token keyword">class</span> <span class="token class-name">Cat</span><span class="token punctuation">:</span>
+    <span class="token builtin">type</span> <span class="token operator">=</span> <span class="token string">'猫'</span>
+
+    <span class="token comment"># 通过__init__初始化的特征</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nickname<span class="token punctuation">,</span> age<span class="token punctuation">,</span> color<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>nickname <span class="token operator">=</span> nickname
+        self<span class="token punctuation">.</span>age <span class="token operator">=</span> age
+        self<span class="token punctuation">.</span>color <span class="token operator">=</span> color
+
+    <span class="token comment"># 动作：方法</span>
+    <span class="token keyword">def</span> <span class="token function">eat</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> food<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'{}喜欢吃{}'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>nickname<span class="token punctuation">,</span> food<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">catch_mouse</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> color<span class="token punctuation">,</span> weight<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'{},抓了一只{}kg的，{}的大老鼠！'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>nickname<span class="token punctuation">,</span> weight<span class="token punctuation">,</span> color<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">sleep</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> hour<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> hour <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'乖乖！继续睡觉吧！'</span><span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'赶快起床出去抓老鼠！'</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">show</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'猫的详细信息:'</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>nickname<span class="token punctuation">,</span> self<span class="token punctuation">.</span>age<span class="token punctuation">,</span> self<span class="token punctuation">.</span>color<span class="token punctuation">)</span>
+
+
+<span class="token comment"># 创建对象</span>
+cat1 <span class="token operator">=</span> Cat<span class="token punctuation">(</span><span class="token string">'花花'</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'灰色'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 通过对象调用方法</span>
+cat1<span class="token punctuation">.</span>catch_mouse<span class="token punctuation">(</span><span class="token string">'黑色'</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+
+cat1<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span>
+
+cat1<span class="token punctuation">.</span>eat<span class="token punctuation">(</span><span class="token string">'小金鱼'</span><span class="token punctuation">)</span>
+
+cat1<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br></div></div><h2 id="_12-4类方法-classmethod"><a href="#_12-4类方法-classmethod" class="header-anchor">#</a> 12.4类方法-classmethod</h2> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># 类方法</span>
+<span class="token triple-quoted-string string">'''
+ 特点:
+  1. 定义需要依赖装饰器@classmethod
+  2. 类方法中参数不是一个对象，而是类
+     print(cls)  # &lt;class '__main__.Dog'&gt;
+  3. 类方法中只可以使用类属性，不能使用方法属性
+  4. 类方法中可否使用普通方法（即test中能不能调用run）？  不能
+  5。 类方法不依赖于对象，可以不带对象
+
+类方法作用:
+因为只能访问类属性和类方法，所以可以在对象创建之前，如果需要完成一些动作(功能)
+
+'''</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">Dog</span><span class="token punctuation">:</span>
+
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nickname<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>nickname <span class="token operator">=</span> nickname
+
+    <span class="token keyword">def</span> <span class="token function">run</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># self   对象</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'{}在院子里跑来跑去!'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>nickname<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">eat</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'吃饭。。。。。'</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 类中方法的调用，需要通过self.方法名()</span>
+
+    <span class="token decorator annotation punctuation">@classmethod</span>
+    <span class="token keyword">def</span> <span class="token function">test</span><span class="token punctuation">(</span>cls<span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># cls  class</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'----------'</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>cls<span class="token punctuation">)</span>  <span class="token comment"># &lt;class '__main__.Dog'&gt;</span>
+        <span class="token comment"># self.run()</span>
+        <span class="token comment"># print(cls.nickname)   报错</span>
+        <span class="token comment"># print(self.nickname)</span>
+
+
+Dog<span class="token punctuation">.</span>test<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># d = Dog('大黄')</span>
+<span class="token comment">#</span>
+<span class="token comment"># d.run()  # 调用run</span>
+<span class="token comment">#</span>
+<span class="token comment"># d.test()</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br></div></div><h2 id="_12-5静态方法-staticmethod"><a href="#_12-5静态方法-staticmethod" class="header-anchor">#</a> 12.5静态方法-staticmethod</h2> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># 补充类方法</span>
+<span class="token triple-quoted-string string">'''
+静态方法: 很类似类方法
+1. 需要装饰器@staticmethod
+2. 静态方法是无需传递参数（cls,self）
+3. 也只能访问类的属性和方法，对象的是无法访问的
+4. 加载时机同类方法
+
+总结:
+类方法  静态方法
+不同：
+  1. 装饰器不同
+  2. 类方法是有参数的，静态方法没有参数
+
+相同:
+  1. 只能访问类的属性和方法，对象的是无法访问的
+  2. 都可以通过类名调用访问
+  3. 都可以在创建对象之前使用，因为是不依赖于对象
+
+普通方法 与 两者区别:
+不同:
+   1. 没有装饰器
+   2. 普通方法永远是要依赖对象，因为每个普通方法都有一个self
+   3. 只有创建了对象才可以调用普通方法，否则无法调用。
+
+'''</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">Person</span><span class="token punctuation">:</span>
+    __age <span class="token operator">=</span> <span class="token number">18</span>
+
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>name <span class="token operator">=</span> name
+
+    <span class="token keyword">def</span> <span class="token function">show</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'---------&gt;'</span><span class="token punctuation">,</span> Person<span class="token punctuation">.</span>age<span class="token punctuation">)</span>
+
+    <span class="token decorator annotation punctuation">@classmethod</span>
+    <span class="token keyword">def</span> <span class="token function">update_age</span><span class="token punctuation">(</span>cls<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        cls<span class="token punctuation">.</span>__age <span class="token operator">=</span> <span class="token number">20</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'-----------&gt;类方法'</span><span class="token punctuation">)</span>
+
+    <span class="token decorator annotation punctuation">@classmethod</span>
+    <span class="token keyword">def</span> <span class="token function">show_age</span><span class="token punctuation">(</span>cls<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'修改后的年龄是:'</span><span class="token punctuation">,</span> cls<span class="token punctuation">.</span>__age<span class="token punctuation">)</span>
+
+    <span class="token decorator annotation punctuation">@staticmethod</span>
+    <span class="token keyword">def</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'----------&gt;静态方法'</span><span class="token punctuation">)</span>
+        <span class="token comment"># print(self.name)  语法错误</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>Person<span class="token punctuation">.</span>__age<span class="token punctuation">)</span>  <span class="token comment"># 直接用类名</span>
+
+
+Person<span class="token punctuation">.</span>update_age<span class="token punctuation">(</span><span class="token punctuation">)</span>
+Person<span class="token punctuation">.</span>show_age<span class="token punctuation">(</span><span class="token punctuation">)</span>
+Person<span class="token punctuation">.</span>test<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># print(Person.__age)</span>
+
+<span class="token comment"># p = Person()</span>
+<span class="token comment"># p.age = p.age+1  #</span>
+<span class="token comment"># p.show()</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br></div></div><h2 id="_12-6魔术方法-new、call"><a href="#_12-6魔术方法-new、call" class="header-anchor">#</a> 12.6魔术方法-new、call</h2> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># 魔术方法</span>
+<span class="token comment"># __init__:初始化魔术方法</span>
+<span class="token comment"># 触发时机：初始化对象时触发（不是实例化触发，但是和实例化在一个操作中）</span>
+
+<span class="token comment"># __new__: 实例化的魔术方法</span>
+<span class="token comment"># 触发时机： 在实例化对时触发</span>
+
+<span class="token comment"># __call__: 对象调用方法</span>
+<span class="token comment"># 触发时机: 将对象当成函数使用的时候，会默认调用此函数中内容</span>
+
+<span class="token comment"># __del__:  delete的缩写 析构魔术方法</span>
+<span class="token comment"># 触发时机：当对象没有用（没有任何变量引用）的时候被触发</span>
+
+
+
+<span class="token keyword">class</span> <span class="token class-name">Person</span><span class="token punctuation">:</span>
+
+    <span class="token keyword">def</span> <span class="token function">__new__</span><span class="token punctuation">(</span>cls<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># __new__  向内存要空间 ---》 地址</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'---------&gt;new'</span><span class="token punctuation">)</span>
+        position <span class="token operator">=</span> <span class="token builtin">object</span><span class="token punctuation">.</span>__new__<span class="token punctuation">(</span>cls<span class="token punctuation">)</span>  <span class="token comment"># 0x637843784</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>position<span class="token punctuation">)</span>  <span class="token comment"># &lt;__main__.Person object at 0x000000000278B860&gt;</span>
+        <span class="token keyword">return</span> position  <span class="token comment"># 地址</span>
+
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'----------&gt;init'</span><span class="token punctuation">,</span> self<span class="token punctuation">)</span>  <span class="token comment"># &lt;__main__.Person object at 0x000000000278B860&gt;</span>
+        self<span class="token punctuation">.</span>name <span class="token operator">=</span> name
+
+    <span class="token keyword">def</span> <span class="token function">__call__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'-----------------&gt;call'</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'执行对象得到参数是：'</span><span class="token punctuation">,</span> name<span class="token punctuation">)</span>
+
+
+p <span class="token operator">=</span> Person<span class="token punctuation">(</span><span class="token string">'aa'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span>  <span class="token comment"># &lt;__main__.Person object at 0x000000000278B860&gt;</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+<span class="token comment">#</span>
+p<span class="token punctuation">(</span><span class="token string">'jack'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># def func():</span>
+<span class="token comment">#     pass</span>
+<span class="token comment">#</span>
+<span class="token comment"># func()</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br></div></div><h2 id="_12-7魔术方法-del"><a href="#_12-7魔术方法-del" class="header-anchor">#</a> 12.7魔术方法-del</h2> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">import</span> sys
+<span class="token triple-quoted-string string">'''
+__del__:
+  1. 对象赋值
+     p = Person()
+     p1 =p
+     说明： p和p1共同指向同一个地址
+     
+  2. 删除地址的引用
+     del p1  删除p1对地址的引用
+     
+  3. 查看对地址的引用次数：
+      import sys
+      sys.getrefcount(p)
+      
+  4.  当一块空间没有了任何引用，默认执行__del__
+       ref =0 
+        
+'''</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Person</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>name <span class="token operator">=</span> name
+
+    <span class="token keyword">def</span> <span class="token function">__del__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'------del---------'</span><span class="token punctuation">)</span>
+
+
+p <span class="token operator">=</span> Person<span class="token punctuation">(</span><span class="token string">'jack'</span><span class="token punctuation">)</span>
+p1 <span class="token operator">=</span> p
+p2 <span class="token operator">=</span> p
+<span class="token keyword">print</span><span class="token punctuation">(</span>p1<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>p2<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+
+p1<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'tom'</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>p2<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>sys<span class="token punctuation">.</span>getrefcount<span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">)</span>   <span class="token comment"># 4</span>
+
+<span class="token keyword">del</span> p2
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'删除p2后打印:'</span><span class="token punctuation">,</span> p<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>sys<span class="token punctuation">.</span>getrefcount<span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 3</span>
+
+<span class="token keyword">del</span> p1
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'删除p1后打印:'</span><span class="token punctuation">,</span> p<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>sys<span class="token punctuation">.</span>getrefcount<span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 2</span>
+
+<span class="token comment"># del p</span>
+<span class="token comment"># print('删除p后打印:', p.name)   #</span>
+
+
+<span class="token comment"># 对象赋值</span>
+n <span class="token operator">=</span> <span class="token number">5</span>
+n1 <span class="token operator">=</span> n
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+
+<span class="token keyword">del</span> n
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br></div></div><h2 id="_12-8魔术方法-str"><a href="#_12-8魔术方法-str" class="header-anchor">#</a> 12.8魔术方法-str</h2> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment">#  __str__：</span>
+<span class="token comment"># 触发时机： 打印对象名 自动触发去调用__str__里面的内容</span>
+<span class="token comment"># 注意： 一定要在__str__方法中添加return，return后面内容就是打印对象看到内容</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Person</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">,</span> age<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>name <span class="token operator">=</span> name
+        self<span class="token punctuation">.</span>age <span class="token operator">=</span> age
+
+    <span class="token keyword">def</span> <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token string">'姓名是:'</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>name <span class="token operator">+</span> <span class="token string">',年龄:'</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>age<span class="token punctuation">)</span>
+
+
+p <span class="token operator">=</span> Person<span class="token punctuation">(</span><span class="token string">'tom'</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span>
+
+<span class="token comment"># 单纯打印对象名称，出来的是一个地址。地址对于开发者来书没有太大意义</span>
+<span class="token comment"># 如果想在打印对象名的时候能够给开发者更多一些信息量，</span>
+
+p1 <span class="token operator">=</span> Person<span class="token punctuation">(</span><span class="token string">'jack'</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>p1<span class="token punctuation">)</span>
+
+<span class="token triple-quoted-string string">'''
+总结：魔术方法
+重点：
+__init__ （构造方法，创建完空间之后调用的第一个方法）， __str__
+
+了解:
+__new__ 作用  开辟空间  
+
+__del__ 作用  没有指针引用的时候会调用。99%都不需要重写
+
+__call__  作用： 想不想将对象当成函数用。
+
+
+大总结：
+方法：
+  普通方法  ---》 重点
+      def 方法名(self,[参数]):
+          方法体
+          
+      对象.方法()
+      
+      方法之间的调用：
+      class A:
+        def a(self):
+            pass
+        def b(self):
+            # 调用a方法
+            self.a()
+  
+  类方法: 
+      @classmethod 
+      def 方法名(cls,[参数]):
+          pass
+          
+      类名.方法名()
+      对象.方法名()
+  
+  静态方法: 
+      @staticmethod
+      def 方法名([参数]):
+              pass
+              
+      类名.方法名()
+      对象.方法名()
+      
+  魔术方法:
+    自动执行方法
+    
+    print(p)  ---&gt; __str__
+
+'''</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新于:</span> <span class="time">9/26/2021, 10:50:58 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/guide/Python/python入门基础-11.html" class="prev">
+        列表推导式和生成器
+      </a></span> <span class="next"><a href="/blog/guide/前端/HTML.html">
+        HTML内容摘要
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.a8766d76.js" defer></script><script src="/blog/assets/js/2.7533f6e6.js" defer></script><script src="/blog/assets/js/41.0e2cafc7.js" defer></script>
+  </body>
+</html>
